@@ -15,7 +15,7 @@ jobs:
       # run pandoc to generate pdf from markdown
       - name: run pandoc
         run: |
-          pandoc --verbose "./src/input.md" -o "output.pdf" --template eisvogel
+          pandoc --verbose "./src/input.md" -o "output.pdf" --template /.pandoc/templates/eisvogel.latex
 
       # output generated file to build artifacts
       - uses: actions/upload-artifact@v3
