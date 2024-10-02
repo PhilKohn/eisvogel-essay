@@ -17,7 +17,7 @@ This repository provides a template for writing documents using Pandoc and the E
 
 1. **Initialize a new repo from this repo template**
 
-- Clone this template to your local machine `git clone `
+- Clone this template to your local machine `git clone https://github.com/PhilKohn/eisvogel-essay.git`
 
 2. **Edit Markdown Content**:
    - Modify the `src/input.md` file with your thesis content.
