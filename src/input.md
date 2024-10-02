@@ -4,185 +4,322 @@ author: [Example Author, Another Author]
 date: \today
 keywords: [Markdown, Example]
 ---
-# [[journals/2024_09_02|Session 1]] 
+# Presentation: Enterprise and Systems Modeling
 
-- [ ] Module INTRO Part 1 #SUPCOM/INTRO 
+## ChatGPT o1 - preview:
 
-- What is a system? #flashcard 
-	- A system is a set of interacting or interdependent components forming an integrated whole.
-	- ![[pages/Open E-Government/Term 1/assets/Pasted image 20240902151050.png]]
-<!--ID: 1725397204171-->
+An **enterprise model** is a representation of the structure, activities, processes, information, resources, people, behavior, goals, and constraints of a business, government, or other enterprise. It focuses on the manual activities carried out by people, the communication among them, and the concepts they use within the organization or domain.
 
+**Why do we need an enterprise model?**
 
-- What is Systems Theory #flashcard 
-	- An interdisciplinary framework for understanding and analyzing complex entities composed of interconnected and interdependent components.
-	- Focuses on how the components of a system interact with each other and with the external environment, emphasizing the relationships and patterns that emerge from these interactions rather than just the individual elements themselves.
-<!--ID: 1725397204175-->
+- **Analysis and Improvement**: It helps in analyzing the current state of an organization to identify problems and areas for improvement.
+- **Designing Better Solutions**: Facilitates the design of new or improved business processes.
+- **Requirement Gathering**: Assists in gathering requirements for new systems that will support the business.
+- **Communication**: Serves as a visual tool for stakeholders to discuss and understand how the business operates and how it can evolve.
 
+A **system model** is a representation of a software or IT system, showing its architecture, components, functions, and the relationships between different modules. It focuses on the automated activities carried out by information systems or software systems.
 
-- Key concepts in Systems Theory
-	- System: A set of interacting or interdependent  components forming an integrated whole.
-	- Subsystems: Smaller systems that are part of a larger system, each having its own function but contributing to the overall system.
-	- ﻿﻿Boundary: The distinction between a system and its environment, defining what is inside the system and what is outside.
-	- ﻿﻿Inputs and Outputs: Resources (such as information, energy, or material) that enter a system (inputs) and the resulting products or effects that leave the system (outputs).
-	- Feedback: The process by which a system self-regulates by using the outputs to influence the inputs, leading to adjustments in behavior.
-	- ﻿﻿Equilibrium and Homeostasis: The state of balance within a system where internal variables are regulated to maintain stability.
-	- ﻿﻿Emergence: The phenomenon where the whole exhibits properties that its individual components do not have on their own.
-	- ﻿﻿Entropy and Negentropy: Systems are subject to entropy, which is the tendency toward disorder. However, systems can also maintain or increase order (negentropy) through self-organization.
+**Why do we need a system model?**
 
-- Applications of System Theory
-	- Biology: Understanding how different organs and cells work together to sustain life.
-	- Engineering: Designing complex systems like transportation networks, computers, or manufacturing processes.
-	- Social Sciences: Analyzing societies, organizations, or economies as interconnected systems.
-	- Ecology: Studying ecosystems as networks of interacting organisms and their environment.
-	- Management: Applying systems thinking to improve organizational effectiveness and solve complex problems.
+- **Analysis of Software Systems**: Helps in understanding and analyzing the existing software systems.
+- **Design and Development**: Aids in designing new systems that optimally support business processes.
+- **Architecture Visualization**: Provides a clear picture of the system's structure and how different parts interact.
+- **Requirement Implementation**: Ensures that the system design aligns with the business requirements gathered from enterprise models.
 
-- Systems Theory to Computer Systems (Relevance to CS)
-	- ﻿﻿Systems Theory offers a powerful lens through which computer systems can be understood, analyzed, and designed.
-	- ﻿﻿By focusing on the interactions and relationships within the system, rather than just the individual parts, Systems Theory helps create more robust, adaptable, and efficient computer systems.
+**In summary**, enterprise models are crucial for understanding and improving business operations, while system models are essential for designing and analyzing the software systems that support those operations. Both types of models are invaluable tools for communication, planning, and implementation within an organization.
 
-- Computer Systems
-	- ﻿﻿Computer Systems as Complex Systems: A computer system can be viewed as a complex system composed of hardware, software, networking, and user interfaces. Each of these components (subsystems) interacts with others, and together, they form an integrated whole that performs specific tasks.
-	- ﻿﻿Subsystem Interactions: In a computer system, subsystems like the operating system, application software, and hardware components must work together harmoniously. Systems Theory helps in understanding how these components communicate, cooperate, and sometimes conflict with each other, leading to system behavior that is often more than the sum of its parts.
-	- System Boundaries: Defining the boundary of a computer system is essential for security, usability, and performance. Systems Theory helps in understanding where these boundaries should be set, such as distinguishing between trusted and untrusted zones in a network or deciding what constitutes a failure in system performance.
-	- ﻿﻿Holistic Analysis: Systems Theory advocates for a holistic approach to problem-solving and system design. Instead of optimizing individual components in isolation, it encourages considering the system as a whole to understand the impact of each component's behavior on the entire system's performance and stability.
+## Transcript
 
-- IMPORTANT: Systems have {INPUT, OUTPUT and FEEDBACK}
-<!--ID: 1725397204178-->
+Welcome to this presentation about enterprise and system modeling. My name is Erik Parjons.
 
+The question to answer in this presentation is what is an enterprise model and why do you need
 
-- What is science?
-	- "Science is the pursuit and application of knowledge and understanding of the natural and social world following a systematic methodology based on evidence."
+it? What is a system model and why do you need it? Further we introduce enterprise and system models
 
-- Early Foundations (17th-19th Century)
-	- Mathematical Beginnings: The roots of computer science can be traced back to mathematical concepts. In the 17th century, the binary number system, fundamental to computer science, was introduced by Gottfried Wilhelm Leibniz.
-	- Analytical Engine: In the 1830s, Charles Babbage designed the Analytical Engine, a mechanical general-purpose computer. Although it was never built in his lifetime, it laid the groundwork for modern computers. Ada Lovelace, who worked with Babbage, is often considered the first computer programmer due to her work on algorithms for the machine.
+by showing this picture. On one side of this picture I want to show you the reword. You think
 
-- The Birth of Modern Computing (1930s - 1940s)
-	- Alan Turing and Theoretical Foundations: In 1936, Alan Turing published a paper introducing the concept of a "universal machine" (now known as the Turing Machine), which could simulate the logic of any computation. This was a key development in the theory of computation.
-	- First Computers: During World War II, the first electronic computers were developed. The ENIAC (Electronic Numerical Integrator and Computer), built in the United States in 1945, was among the first general-purpose electronic computers.
-	- Von Neumann Architecture: John von Neumann proposed the stored-program concept in 1945, where a computer's program and the data it processes are stored in the same memory. This architecture remains the foundation of most modern computers.
+it as a real world. You can touch people, buildings, cars and computers. On the other
 
-- Alan Turing
-	- Provides a mathematical model for computation and defines the limits of what can be computed.
-	- Turing Machine: A theoretical device that manipulates symbols on a strip of tape according to a set of rules. Despite its simplicity, it can simulate the logic of any computer algorithm.
-	- Decidability: The theory helps distinguish between problems that can be solved algorithmically (decidable) and those that cannot (undecidable).
-	- Church-Turing Thesis: This hypothesis posits that anything computable by a machine (in the physical sense) is computable by a Turing Machine.
-	- Impact: Turing's work laid the foundation for the field of theoretical computer science, influencing areas such as algorithm design, computational complexity, and the development of programming languages.
+side you have the model world where you actually try to represent the real world by using different
 
-- Turing Test
-	- A test of a machine's ability to exhibit intelligent behavior indistinguishable from that of a human.
-	- In the test, a human evaluator interacts with both a machine and a human without knowing which is which.
-	- ﻿﻿If the evaluator cannot reliably tell the machine from the human based on their responses, the machine is said to have passed the test, demonstrating a form of artificial intelligence. 
-	- The Turing Test has become a foundational concept in discussions about Al and machine intelligence.
-	- ![[pages/Open E-Government/Term 1/assets/Pasted image 20240902154730.png]]
+kind of models. The real world I have divided into three levels. The top levels shows manual
 
-- The Growth of Computer Science (1950s - 1970s)
-	- Programming Languages: The 1950s and 1960s saw the development of the first high-level programming languages, such as FORTRAN (1957) for scientific computing and COBOL (1959) for business applications. Grace Hopper played a crucial role in the development of COBOL.
-	- Operating Systems and Software Development: The concept of operating systems emerged in the 1960s, with early systems like UNIX (developed in 1969). This period also saw the formalization of software engineering as a discipline.
-	- Artificial Intelligence: The term Artificial Intelligence (AI) was coined in 1956 by John McCarthy, and the field began to take shape with early AI programs that could solve problems and play games like chess.
+activities carried out by people. It also shows the communication and the concepts used by the people
 
-- The Personal Computer Revolution (1970s - 1980s)
-	- Microprocessors and PCs: The invention of the microprocessor in the early 1970s, such as the Intel 4004, led to the development of personal computers (PCs). The Apple II (1977) and the IBM PC (1981) brought computing to homes and small businesses.
-	- Networking and the Internet: The development of the ARPANET in the late 1960s, a precursor to the internet, and the introduction of the TCP/IP protocol in the 1980s laid the foundation for the modern internet.
+in the organization or in the domain that you want to model.
 
+The middle level also shows manual activities, but in this case it's manual activities where you
 
-# [[journals/2024_09_06|Session 2]]
+actually do things with the computer, use the keywords, use the screen, use the mouse.
 
-## Literature for [[journals/2024_09_06|Session 2]]
+Finally, in the bottom you show the system, the systems in the real world. In this part
 
-### [[Readwise/Articles/The Science of Computing Shaping a Discipline|The Science of Computing Shaping a Discipline]]
+the activities are carried out automatically by information system, IT system or software system.
 
-#### Key Take Aways Chapter 1
+The top level showing in the real world showing different manual activities could be represented
 
-1. **Historical Evolution of Computing as a Discipline:**
-   - Computing has ancient roots, with counting systems and mechanical devices existing for millennia.
-   - The modern discipline of computing has no definitive birthdate, but key milestones include developments in the early 1900s in mathematical logic and electrical engineering.
-   - Key figures like George Boole (Boolean logic) and Alan Turing (Turing machines and computability) are central to the early development of computer science concepts.
+by for example business model showing how people are which activities are carried out and in which
 
-2. **Core Computing Principles:**
-   - The chapter highlights fundamental concepts that became central to computing:
-     - **Algorithms**: Step-by-step procedures to solve problems.
-     - **Stored-Program Concept**: Instructions and data can be stored in the same memory.
-     - **Separation of Components**: The division of memory, processing units, control units, and input/output.
+order. Also the concepts used the terms and concept used could be modeled using in this case a domain
 
-3. **Disciplinary Identity and Ongoing Debates:**
-   - There is no consensus on what defines computing as a discipline, despite decades of debate.
-   - The chapter explores the diverse viewpoints on whether computing is primarily an engineering, mathematical, or scientific discipline.
-   - Arguments about computing’s identity focus on its role as a **theoretical field** (similar to mathematics), **an engineering discipline** (focused on practical solutions), or **a science** (focused on empirical data and the study of information processes).
+model. Also the interaction with computer could be modeled using different kind of use human
 
-4. **Interdisciplinarity and Complexity of Computing:**
-   - Computing draws from multiple fields, including mathematics, electrical engineering, physics, and more recently, social sciences and life sciences.
-   - The rapid expansion and diversity of computing applications, such as artificial intelligence, human-computer interaction, and scientific computing, make defining the discipline as a whole difficult.
-   - The field's interdisciplinarity is both a strength (enabling innovation across sectors) and a challenge (causing fragmentation in defining core methods and objectives).
+interaction models for example UML use cases. Finally you could also model the system the systems
 
-5. **Major Debates within the Discipline:**
-   - There are important debates in computing that still affect how the field is structured and taught:
-     - **Theoretical vs. Practical Focus**: Some view computing as an abstract, theoretical discipline, while others emphasize practical engineering applications.
-     - **Scientific Nature of Computing**: Whether computing qualifies as a natural or empirical science, especially considering artificial systems.
-     - **The Formal Verification Debate**: How much of computing should focus on formal, mathematical proof of correctness versus empirical, experimental methods.
+in the real world. You can model them by showing what type of concept the different systems are
 
-6. **Impacts on Curriculum and Research:**
-   - The unresolved debates influence the curriculum in computing, with disagreements over the balance between teaching theory, mathematics, and practical skills.
-   - There is also no unified agreement on research methodologies, with differences between the use of formal proofs, empirical experiments, and engineering design methods.
+using or you can also show how the different objects in the system are interacting when things
 
-Potential Exam Questions:
-   - Discuss the evolution of computing as a discipline and explain why it is difficult to define it as purely mathematical, engineering, or scientific.
-   - Compare and contrast the views of computing as a theoretical, engineering, and scientific field. How have these perspectives influenced research and teaching in computer science?
-   - Explain the significance of key milestones such as the development of Boolean logic and the Turing machine in shaping modern computing.
-   - Discuss the challenges of interdisciplinarity in computing and its impact on the identity of the field.
+are happening. The upper part here, models that show the manual activities or the way people are
 
-For Chapter 2 of *The Science of Computing: Shaping a Discipline*, here are the key takeaways relevant for a master's level exam:
+talking in the, communicating in the business are usually called enterprise models. While the
 
-#### Key Take Aways Chapter 2
+models while the model is showing the system, the IT system, the software system are called system models.
 
-1. **Hard Core of Theoretical Computing:**
-   - Every academic discipline has a "hard core" of theoretical ideas that guide research and provide foundational concepts. In computing, this includes formal definitions of algorithms, computability, and the nature of computation itself.
-   - The chapter emphasizes that computing’s theoretical roots date back to foundational work in **mathematical logic** and **symbol systems**.
+We first had to find what we mean by enterprise model.
 
-2. **Leibniz and the Dream of a "Language of Thought":**
-   - **Gottfried Wilhelm Leibniz** (1646–1716), a polymath, envisioned a symbolic language for reasoning that could represent all human thoughts (the *characteristica universalis*) and a calculus for deriving truths from these symbols (*calculus ratiocinator*).
-   - Leibniz’s idea laid early foundations for modern **formal logic** and **symbolic computation**, inspiring later developments in computing.
+It is a representation of the structure activities, processes, information, resources, people,
 
-3. **Boolean Algebra and the Laws of Thought:**
-   - **George Boole** (1815–1864) developed **Boolean algebra**, a system of symbolic logic that operates with binary values (true/false). This algebra underpins modern logic circuits and binary computation, essential for digital computing systems.
-   - Boole's work is significant for showing how logic can be formalized using algebraic techniques, but it had limitations, particularly with quantifiers like "some" and "all."
+behavior, goals and constraints of a business, government or another enterprise.
 
-4. **Frege’s Formal Logic System:**
-   - **Gottlob Frege** (1848–1925) introduced a formal system for reasoning with **quantifiers** and **logical inference**, which is a direct precursor to modern programming languages and the logic used in computing.
-   - Frege’s system allowed for rigorous, formal proofs without appealing to intuition, marking an important step in the mechanization of thought, an idea central to computer science.
+And these type of models are very useful for analyzing
 
-5. **Hilbert’s Decision Problem (Entscheidungsproblem):**
-   - In the late 1800s, **David Hilbert** posed the **decision problem**, asking if there was a mechanical procedure to decide whether a given logical proposition is true or false. Solving this problem became central to formalizing the notion of an algorithm.
-   - The decision problem led to critical advancements in the definition of what can be computed (computability).
+organization in order to design a better solution. It could be better than new business processes,
 
-6. **Kurt Gödel’s Incompleteness Theorems:**
-   - **Kurt Gödel** (1906–1978) demonstrated the limits of formal systems in his **incompleteness theorems**. He showed that in any sufficiently powerful system, there are true statements that cannot be proven within that system.
-   - Gödel’s work had significant implications for mathematics and computing, proving that some problems cannot be fully solved through formal logic or computation alone.
+but it could also be a software system, an IT system, supporting the business.
 
-7. **Turing Machines and Computability:**
-   - **Alan Turing** (1912–1954) provided a formal model of computation with his **Turing machine**, a theoretical device that could perform computations by following a set of rules (an algorithm).
-   - Turing’s model introduced the idea that a machine could simulate any other machine (the **Universal Turing Machine**), which is foundational to the concept of general-purpose computers.
-   - Turing’s work solved the **decision problem** by showing that no algorithm can solve all decision problems (the **halting problem**), meaning there are limits to what can be computed.
+And usually, when you introduce a new IT system, software system in the business,
 
-8. **Algorithmic Thinking and Formalization:**
-   - The development of **formal methods** for defining algorithms and computability was a major step in shaping modern computing. Early work in **mathematical logic**, **algebra**, and **mechanized reasoning** provided the theoretical tools for developing digital computers.
-   - The definition of an algorithm as a step-by-step procedure that can be followed without intuition is critical to understanding both the power and limitations of computing.
+you usually also change the business processes to really make use of this new system.
 
-Potential Exam Questions:
-   - Describe Leibniz's vision of a "language of thought" and how it influenced the development of modern computing concepts.
-   - Explain George Boole's contributions to symbolic logic and their significance for digital computing.
-   - Discuss Gödel’s incompleteness theorems and their implications for computability and the limits of formal systems.
-   - What is the **Turing machine**, and how did it provide a formal solution to Hilbert's **decision problem**? Discuss its importance in the development of general-purpose computing.
-   - Explain the concept of computability and its formalization in the 20th century. How did Turing and others contribute to this understanding?
+A system model is a representation of the system.
 
-Key Concepts for a Master's Level Exam:
-1. **Mathematical and Logical Foundations**: Understanding how logic and mathematics form the basis of computing theory.
-2. **Algorithm and Computability**: Grasping how algorithms are formalized and the limits of what can be computed.
-3. **Historical Development**: Recognizing key historical figures like Leibniz, Boole, Frege, Gödel, and Turing, and their roles in shaping the field of computer science.
-4. **Formal Proofs vs. Intuition**: The move from intuitive methods of problem-solving to rigorous formal proofs and their relevance to computer science.
+It shows the architectures, which part, which modules exist, and how they're related to each other.
 
-## Inspera Download
+It shows the functions, the activities, and so on in the system.
 
-- There is a PDF: https://www.icloud.com/iclouddrive/09e2Spd-d5vT01ZQzstTAMZrw#Inspera_Instructions
+And these type of models are very useful for analyzing software system
 
+and in order to actually design a software system
+
+and actually support the business in an optimal way.
+
+So now let's go back to the basic.
+
+What is a model?
+
+Well, you can define a model as a structure
+
+that represents the picture, describe a system
+
+or a certain aspect of a part of the real world.
+
+And this model could be texture,
+
+but it can also be graphical.
+
+And we focus on graphical models in this course.
+
+That means that we actually want to visualize objects,
+
+relationships, processes, action,
+
+using different kinds of graphical elements.
+
+It could be boxes, it could be arrows between the boxes.
+
+It could be lines, it could be circles and so on.
+
+There are two types of models, static or dynamic models.
+
+We start with the static or structured models.
+
+They specify static aspects of the real world or the system.
+
+Or more precisely, they specify what objects exist in the system or in the real world
+
+and what is their relationships.
+
+To state it simple, they answer the question what things exist
+
+and how these are related to each other.
+
+Then we have the dynamic behavior models.
+
+They specify the dynamic aspects of the real world of the system that you want to model.
+
+They more precisely are specified how does the object and the relationship change
+
+during the life cycle of the system or the changes in the real world.
+
+Simply stated they answer the question how does things change.
+
+There are also two other types of models, assist models and to-be models. Assist models describe
+
+the system of the real world as it is just now, while the to-be models is the future description
+
+in a future state of a certain aspect of the real world
+
+or the system they want to model.
+
+Now we come to an important question.
+
+Why do you want to use models?
+
+Well, it is a very useful means or tool
+
+for analyzing part of the real world
+
+to identify problems in the system or in a real world.
+
+It also means for gathering requirement on a system.
+
+It's very useful for understanding
+
+how the business works because it visualizes
+
+the elements of the real world.
+
+And by using these models, you can easily understand
+
+what type of requirement you want the system to have.
+
+It's also a means for designing a system.
+
+For example, you can use modeling as a first step
+
+before you start coding the system
+
+to give the overall architecture,
+
+to provide the overall architecture of the system.
+
+And it's a very important means for communication.
+
+It's very easy to gather people around
+
+a graphical model to discuss,
+
+okay, how does the business work today?
+
+How do we want it to work?
+
+How do we want the future system to be designed?
+
+When you start modeling, you need a modeling language.
+
+Well, you could skip the modeling language
+
+and just draw circles, arrows, rectangles, and so on.
+
+But the good thing with using a modeling language
+
+is to get a more formalized description
+
+of what the different symbol means.
+
+Look at this picture here.
+
+You can see that we want to represent the real world
+
+by using, for example, static and dynamic models.
+
+Each of these models need a language.
+
+For example, the static language,
+
+static models need its language
+
+supporting the construction of a static model.
+
+In the same way, a dynamic model,
+
+you should use another language
+
+supporting the construction of a dynamic model.
+
+And these languages then specify certain things.
+
+And I had simplified it a little bit
+
+and stated this language,
+
+first of all, specify the abstract syntax.
+
+It specified what language concepts are used.
+
+For example, if you want to describe a behavior model,
+
+you usually use concepts like action, flow, event, and so on.
+
+If you want to describe the more static system,
+
+The language usually uses concepts like object, class, relationships.
+
+This is abstract syntax.
+
+We actually define the central concept and usually do that by defining one concept with
+
+another concept.
+
+Then you have the concrete syntax.
+
+We actually describe the different symbols that you should use when you start modeling
+
+the system or the real world.
+
+And so the concrete syntax actually consists of a set of symbols, for example, a rectangle
+
+or a box or an arrow.
+
+And to understand the meaning of these symbols, you have to go to the abstract syntax and
+
+read about it there. Both these parts I usually call in my presentation a modeling element.
+
+Sometimes it's also called notation. The thing is notation could mean different things. The
+
+notation could mean both the abstract syntax and the concrete syntax or it could only mean the
+
+concrete syntax. So I usually try to use the modeling element to have this more generic
+
+concept for abstract syntax and concrete syntax. The modeling language that we are going to use
+
+on this course is UML. It's a general purpose modeling language which was created for modeling,
+
+for visualizing software systems.
+
+But today, UML is also used for enterprise modeling
+
+to describe the business and organization.
+
+UML has many different diagrams, actually 13,
+
+and each provide a certain perspective
+
+or focus on a model.
+
+In my presentation, I usually use
+
+diagram and graphical models as synonyms.
+
+But actually, UML does not talk that way.
+
+They actually say that you have one model of the system,
+
+but the different diagrams provide different perspective
+
+of that model.
+
+So we can see here that UML has 13 diagrams, they have 6 structured diagrams and 7 behavior diagrams
+
+and we're going to go through 3 of these diagram types in this course.
+
+Class diagram, activity diagram and use cases.
+
+Finally, we are back to the questions that we wanted to answer in this presentation
+
+and it's now your turn to try to answer this question.
+
+What is an enterprise model? Why do we need it? What is a system model and why do we need it?
+
+.
