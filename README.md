@@ -17,12 +17,7 @@ This repository provides a template for writing documents using Pandoc and the E
 
 1. **Initialize a new repo from this repo template**
 
-- Clone this template to your GitHub account
-- Download GitHub CLI
-- On Mac: brew install gh
-- login to GitHub using gh auth login
-- If Auth login fails due to permission issues on ./config check: cli/cli#5013 (comment)
-- Create a new repo on GitHub using gh repo create and follow each step, select create from template, give the repo a name, select paperplate as the template
+- Clone this template to your local machine `git clone `
 
 2. **Edit Markdown Content**:
    - Modify the `src/input.md` file with your thesis content.
