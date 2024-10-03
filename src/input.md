@@ -1,378 +1,339 @@
 ---
-title: "Presentation: Enterprise and Systems Modeling"
-author: [Chat GPT o1, Noted App]
+title: "Presentation: Managing problematic modelling situations with UML activity diagrams"
+author: [Chat GPT o1, Noted App, Erik Perjons]
 date: \today
 keywords: [Markdown, Example]
 ---
-# Presentation: More about process modelling with UML activity diagram so 
+# Presentation managing problematic modelling situations with UML activity diagrams
 
 ## ChatGPT o1-preview
 
-**Summary of the Lecture on Advanced Process Modeling with UML Activity Diagrams**
+**Summary of the Lecture on Managing Problematic Modeling Situations with UML Activity Diagrams**
 
-This lecture delves into additional modeling elements within UML Activity Diagrams, focusing on enhancing the precision and clarity of process models in enterprise environments. The key topics covered include the distinction between actions and activities, the concept of tokens, understanding process instances, and the use of swimlanes (partitions) to represent different performers or responsible parties within a process.
+In this lecture, **Erik Perjons** discusses common problematic situations that arise when modeling business processes using UML Activity Diagrams. He presents three specific scenarios and offers alternative solutions for each, highlighting their advantages and drawbacks. The goal is to equip modelers with strategies to handle complex modeling challenges effectively.
 
-1. **Actions vs. Activities**:
-   - **Action**: Represents a single, atomic step within an activity that cannot be further decomposed. It is the most granular level of behavior in an activity diagram.
-   - **Activity**: Denotes a composite behavior made up of multiple actions and/or other activities. It can be decomposed into smaller actions or activities.
-   - **Notation**: Activities are often indicated by a rectangle with a fork symbol inside, signaling that they contain sub-actions or sub-activities.
+---
 
-2. **Tokens**:
-   - **Definition**: Tokens are abstract representations of control or data values that flow through the activity diagram. They symbolize the dynamic aspect of the process, such as orders, cases, or entities like a patient in a healthcare process.
-   - **Purpose**:
-     - **Validation**: Using tokens helps ensure that the activity diagram is logically sound and correctly modeled. If tokens cannot flow through the diagram without issues, it indicates potential problems in the model.
-     - **Process Instance Visualization**: Tokens aid in visualizing the execution of a specific process instance, tracking the progression of a particular case (e.g., an individual customer order) through the various actions and activities.
-   - **Behavior**: Tokens are consumed and produced as actions and activities are executed, moving through the diagram along the defined control flows.
+### **1. Modeling Shared Actions Between Multiple Actors**
 
-3. **Process Instances**:
-   - **Concept**: A process instance refers to a single execution of the process model, representing a specific occurrence (e.g., processing a particular customer's order).
-   - **Visualization with Tokens**: By following the token through the activity diagram, one can trace the exact path taken during a process instance, including decision points and parallel actions.
-   - **Detailed Tracking**: Additional data, such as timestamps, order details, and participant information, can be associated with each action to provide a comprehensive view of the process instance's execution.
+**Problem**:
+- How to represent a situation where two different actors (e.g., the restaurant manager and chefs) carry out the **same task together**, such as participating in a meeting after the manager completes administrative tasks.
 
-4. **Swimlanes (Partitions/Lanes)**:
-   - **Definition**: Swimlanes are visual elements used to partition an activity diagram into separate sections, each representing a different performer, department, role, or responsible entity involved in the process.
-   - **Purpose**:
-     - **Clarifying Responsibilities**: They help clarify who is responsible for each action or activity within the process, enhancing understanding and communication among stakeholders.
-     - **Organizing the Diagram**: Swimlanes provide structure to the activity diagram, making it easier to read and interpret by grouping related actions under their respective performers.
-   - **Notation**: The entire set of swimlanes can be referred to as a "pool," akin to lanes in a swimming pool, with each lane assigned to a specific entity.
+**Alternative Solutions**:
 
-**Example Application**:
+- **Solution 1: Parallel Actions with AND Split**
+  - **Method**: Use an **AND split** (fork) after the administrative tasks, and place the same action ("Participate in Meeting") in both the restaurant manager's and chefs' swimlanes (partitions).
+  - **Benefit**: Illustrates that both actors are performing the action in parallel.
+  - **Drawback**: It's unclear if they are participating in the **same meeting**, as the action appears separately in each swimlane.
 
-- In a book company process model:
-  - **Actions** like "Calculate Sum for Products" are atomic steps that cannot be broken down further.
-  - **Activities** like "Get Ordered Products" may consist of multiple actions, such as "Find Products in Warehouse" and "Transport Products to Delivery Department."
-  - **Tokens** represent specific orders (e.g., Anna Andersson's order) flowing through the process, consumed and produced by actions, and used to validate the correctness of the diagram.
-  - **Swimlanes** might include partitions for the Order Handling Department, Delivery Department, and Sales & Marketing Department, each responsible for different actions within the process.
+- **Solution 2: Shared Action on Swimlane Border**
+  - **Method**: Position the shared action on the **border** between the two swimlanes.
+  - **Benefit**: Clearly indicates that the action involves both actors simultaneously in the same activity.
+  - **Drawback**: May not be visually appealing, as the action straddles swimlane boundaries, potentially causing confusion.
+
+- **Solution 3: Additional Combined Swimlane**
+  - **Method**: Create an **additional swimlane** that represents activities involving both actors, and place the shared action within this lane.
+  - **Benefit**: Explicitly shows that the action is a joint activity between the restaurant manager and chefs.
+  - **Drawback**: Makes it harder to trace individual roles' actions, as activities are split across multiple swimlanes. It adds complexity to the diagram.
 
 **Conclusion**:
+Each solution effectively models the shared action scenario but comes with trade-offs between clarity and diagram complexity. The choice depends on the modeler's priorities, such as visual aesthetics or the emphasis on collaborative activities.
 
-Understanding these advanced elements enhances the ability to model complex business processes accurately using UML Activity Diagrams. Actions and activities provide the appropriate level of detail, tokens offer a mechanism for validating process flow and visualizing process instances, and swimlanes clarify responsibilities among various performers in the organization. Mastery of these concepts leads to higher-quality models that effectively communicate the intricacies of enterprise processes.
+---
+
+### **2. Modeling Optional and Order-Independent Actions**
+
+**Problem**:
+- How to represent a situation where an actor may perform two different actions in **any order**, sometimes only one of them, or sometimes none at all.
+
+**Alternative Solutions**:
+
+- **Solution 1: AND Split with XOR Decisions**
+  - **Method**:
+    - Use an **AND split** (fork) to create parallel paths for both actions.
+    - On each path, introduce an **XOR split** (decision node) to decide whether to perform or skip the action.
+    - Each action path rejoins using an **AND join**.
+  - **Benefit**: Captures all possible combinations (both actions, one action, or none) while maintaining parallelism.
+  - **Drawback**: Adds complexity due to multiple splits and joins; may be visually cluttered.
+
+- **Solution 2: XOR Splits Without AND Splits**
+  - **Method**:
+    - Begin with an **XOR split** offering options:
+      - Perform the first action.
+      - Perform the second action.
+      - Perform neither action.
+    - After each action, include another XOR decision to determine if additional actions will be performed.
+    - Paths eventually converge using an **XOR join**.
+  - **Benefit**: Simplifies the diagram by eliminating unnecessary parallel paths.
+  - **Drawback**: Requires careful construction to ensure all possible execution paths are accurately represented.
+
+**Conclusion**:
+Both solutions are valid and can be chosen based on diagram simplicity and clarity. Modelers may also explore other creative approaches to represent such optional and unordered activities, as long as the diagram remains accurate and understandable.
+
+---
+
+### **3. Managing Diagram Continuation Across Multiple Pages**
+
+**Problem**:
+- When an activity diagram is too large to fit on a single page, how to continue it onto another sheet while maintaining clarity and flow.
+
+**Solution**:
+
+- **Use of Connectors**:
+  - **Method**:
+    - Place a **connector symbol** (usually a circle with a label, e.g., "A") at the point where the diagram continues.
+    - On the next page, start with the same connector symbol to indicate the resumption of the process flow.
+  - **Benefit**: Provides a clear and standardized way to link sections of the diagram across multiple pages without confusing the reader.
+  - **Implementation**:
+    - Ensure that connectors are uniquely labeled if there are multiple continuation points.
+    - Keep a consistent style for connectors to maintain professional appearance.
+
+**Conclusion**:
+Using connectors is an effective and straightforward method to handle large diagrams. It helps maintain the logical flow of activities across pages without overwhelming a single diagram space.
+
+---
+
+**Overall Takeaways**:
+
+- **Flexibility in Modeling**: UML Activity Diagrams offer various ways to represent complex scenarios. Understanding different modeling techniques allows for flexibility in capturing the nuances of business processes.
+- **Balancing Clarity and Complexity**: Each modeling choice involves trade-offs. Modelers should strive for clarity while managing diagram complexity, ensuring that stakeholders can easily interpret the diagrams.
+- **Problem-Solving Approach**: When faced with modeling challenges, consider multiple solutions, assess their pros and cons, and select the one that best fits the context and communication goals.
+
+By exploring these problematic situations and their solutions, the lecture enhances the modeler's toolkit for effectively representing intricate business processes using UML Activity Diagrams.
 
 ## Transcript
 
 
-Welcome to this presentation entitled more about process modeling with UML activity diagram.
+In this presentation, I will present some problematic modeling situations with
 
-We will here present some additional modeling elements in UML activity diagram.
+UML activity diagram. I will also discuss how to manage these problematic situations.
 
-You recognize, you probably recognize this diagram which we introduced in the first presentation.
+Here is the first problematic modeling situation. The first problematic modeling situation is when
 
-And you can also see the name of the different modeling elements that we used or presented
+two different actors are carrying out the same task, the same action. In this case,
 
-in the first presentation.
+the restaurant manager and the chefs have to have a meeting together after that the
 
-Let's now start introducing some additional modeling elements.
+restaurant manager has carried out administration tasks. How do you model that? You can stop
 
-Let's start with the distinction between action and activity.
+the recording and try to find a solution of your own before I present some alternative
 
-An activity diagram can include both activities and actions.
+solution to this situation. The first alternative solution is to present
 
-Action is a modeling element which represents a single atomic step within an activity.
+a fork or what we call an AND split.
 
-That is, an action cannot be further decomposed into more detailed actions.
+So after that the restaurant manager
 
-That is, an action is a single atomic step which cannot be further decomposed into additional
+has carried out the administration task,
 
-more detailed actions.
+we introduce an AND split.
 
-An activity on the other hand represents a behavior that is composed of activities and/or
+And then we put the same task or the same action
 
-actions.
+in both the restaurant manager and the chefs
 
-Let's check the diagram to the left.
+relaying the partition.
 
-You can here see two rectangles we draw on the corner.
+So in this case, we can see that the restaurant manager
 
-labeled get ordered products and the other calculate sum for products. The
+and the chefs are carrying out a participate in meeting,
 
-first one get order products is an activity and you can see that by the
+in parallel sort of thing.
 
-symbol and the fork symbol within the rectangle that shows the user of this
+The good thing with this solution is to show
 
-model that this is an activity that consists of additional activities or
+that both the restaurant manager and the chefs
 
-actions while calculate sum for products is an action which cannot be further
+are participate in a meeting.
 
-decomposed into additional actions. Let's check now the first activity, get order products.
+and do that in parallel.
 
-We know that it's an activity due to the symbol, the fork symbol, within the rectangle. And to the
+The drawback of course is that we are not totally sure
 
-right we can see that this activity consists in this case of two actions, find products in warehouse
+that they are participating in the same meeting.
 
-and transport products to the delivery department. This means that the modern element activity could
+Okay, the action has the same name,
 
-could be sometimes a little bit tricky to use.
+but we are not sure that they actually carry out
 
-In this case, you see activity to the left,
+the same meeting, even though they have the same name.
 
-it has start, initial node,
+Another solution that handled this drawback
 
-it has some modeling element
+from the previous slide is that we actually put the action
 
-and then test the activity final.
+in both the restaurant manager and the chef's name.
 
-All these steps are called an activity.
+So this is an alternative solution.
 
-But in the activity, there are, in this case,
+Maybe one drawback here is that we actually have to put
 
-an additional activity, get order of products.
+the action on the border between the restaurant manager
 
-And we know that this is an activity
+and the chefs, which might not look so good.
 
-due to the fork symbol within the rectangle.
+A third solution is to present an additional lane,
 
-Let's now check the next modeling element, token.
+an additional partition where you add the action
 
-A modeling element token is a short term
+participates in meeting.
 
-for control and data values that flows through an activity.
+And this lane, this partition,
 
-Let's make it more concrete.
+include both the restaurant managers and the chefs.
 
-A token could represent many things.
+This is a nice solution, but it has a drawback.
 
-Token could represent specific order, Anna Andersson's order.
+So for example, if you want to follow what the chef does,
 
-It could represent a certain case,
+you not only need to follow the lane of the chefs,
 
-for example, Anna Andersson's case.
+you also need to go to lanes where the chefs
 
-It could also represent the patient
+do things together with other actors, with other roles.
 
-which can flow through an activity.
+So that's, I can say, it's a drawback with this solution.
 
-For example, Anna Andersson as a patient.
+But you can use all these three alternative solutions,
 
-Token is consumed and produced in each action activity
+and they have some benefit and drawbacks, as you have seen.
 
-in the diagram.
+Here is the second problematic modeling situation.
 
-And why is it important to understand tokens?
+Another problematic modeling situation is if an actor or role can carry out two different
 
-Well, they are very useful to see
+actions in any order.
 
-if the activity diagram that you have created
+Sometimes only one of the actions will be carried out and sometimes none.
 
-is modeled in a correct way.
+How do you model that?
 
-If you cannot use tokens,
+we can stop the recording and think about a solution for that.
 
-your activity diagram probably has some problem
+This is a solution to the problematic modeling situation.
 
-and need to be corrected.
+We call this alternative one.
 
-So let's now be even more concrete.
+In this case, I have introduced a fork or what we call an AND split.
 
-Say that this activity diagram
+And if we have an AND split, all the flows after the AND split has to be carried out,
 
-describe an activity in a book company,
+which means that the left flow or left pass has to be carried out and also the right pass,
 
-receive orders, get order products, calculate some and also update customer info and finally deliver the products.
+the right flow has to be carried out in the picture and from the read.
 
-Welcome to this present carry out the action deliver products in the bottom
+But this was not the case.
 
-because the left path is the tokens are still to go through the left path here. So the next step
+We said that sometimes only one of the actions will be carried out, and sometimes none.
 
-which is going to happen with this token is that it will be consumed in the get order products
+How do we handle that?
 
-when that action is carried out. In the next action, calculate sum for products.
+Well, in this case, I have introduced an XOR split after the AND split.
 
-Now we have an all split, so either the token follows the path where the sum is larger than
+If you follow the left flow, the left path here, you can see that after the AND split,
 
-thousand or the path where the sum is less or equal to thousand. And in this case,
+we have an XOR split, and we have two conditions.
 
-we check the order and see, okay, it is lower than thousand, so we will follow the left path here in
+Either we carry out the task or we don't.
 
-in this case, we produce a token in the next action, calculate delivery cost.
+jump over the tasks. So we will have the same solution on the right
 
-And when this action is carried out, the token will be consumed and will be produced in the next
+flow on the right path. Check the quality of the received food from
 
-action, calculate total sum. And now it is actually possible to carry out the action,
+vendors. So in this case I have handled this situation by using an AND split
 
-deliver products. Because when we have carried out the action, calculate total sum and action,
+AND or splits two or splits for each path or for each flow.
 
-update customer info to the right. When those two actions are carried out, the tokens will be
+Here we have another solution to the problematic modeling situation. We call
 
-consumed in this action and put in the next action delivery products and when that action is finally
+the solution alternative queue.
 
-carried out tokens in the finally activity. So by using tokens you can check that your
+Here I don't use any AND split, only XOR split.
 
-activity, your activity diagram actually works. It's possible to go through your activity step by
+So let's check here.
 
-step by using a token and if that works your activity diagram probably is of high quality.
+The first thing that happened is we actually have
 
-If it's not you probably need to reduce some part of your activity diagram.
+an XOR join, so we don't have to carry
 
-We have discussed the concept of process instance earlier in this course. However,
+about the first symbol.
 
-the concept of process instance could be hard to grasp. By using a token you could make the concept
+After that, we have an XOR split.
 
-more understandable. The tokens could be used for describing the performance of a certain process
+Either you carry out the administrative task,
 
-instance. To say that we receive an order from Anna Andersson, the tokens can then show which
+or you check the quality of the received goods,
 
-action and activities are carried out and how long they will be carried out for each action or
+or the third condition, not carry out any task.
 
-activity. So we can follow the tokens step by step through the process and understand how exactly
+So if none of the tasks will be carried out,
 
-this process instance for Anna Andersson's order were carried out.
+we follow the right path, the right flow here.
 
-There are other ways to represent the process instance.
+If we first carry out the administrative task,
 
-For example, we could present the actions and activities
+we take the left flow, the left path,
 
-carried out for a certain instance
+and then we carry out administrative task,
 
-and provide information about which date and time they were
+and again, we have an XOR join, joining the two paths.
 
-carried out, as well as other data related
+Then we have another XOR split, where we have two options.
 
-to the process instance.
+We carry out additional task,
 
-So if we look at the figures or the diagram to the right,
+or we're not carrying out any more task.
 
-you can see here that the action received order was carried out
+If we carry out additional task, we go to the left.
 
-a certain day during a certain time interval.
+If we don't carry out any more tasks,
 
-You can also see the number of the order,
+we go straight down in the flow.
 
-the name of the customer, the customer number,
+And then join the other, the rightmost flow,
 
-as well as the product ordered.
+not carrying out any tasks.
 
-Then after that, we can see that the next things that
+Check this alternative solution.
 
-happened here in this process instance
+I think both these solutions are pretty good,
 
-was to update the customer info.
+both alternative one and alternative two.
 
-And we can see the time interval when that was done.
+There might be additional alternative solutions.
 
-After that, we can see that this process instance next action
+So you could think to find a third alternative solution,
 
-was calculate sum for products.
+try to identify a third alternative solution
 
-And again, we can see the date and the time interval
+for this problematic modeling situation.
 
-for this action, but also the sum.
+Here is the third problematic modeling situation.
 
-And since the sum is over 1,000, it's actually 5,000,
+Sometimes when you do modeling,
 
-it's following two actions in the diagram
+there is no more space left on the modeling sheet
 
-are not carried out.
+that you use.
 
-we don't need to add the delivery cost
+That means that you need to continue on another sheet,
 
-since the sum is over 1,000.
+on another page.
 
-Finally, the last action carried out for this instance
+And how do you present that?
 
-is the delivery product.
+How do you handle that?
 
-And again, we can see the date and the time interval
+Well, there is actually a very simple solution
 
-for carrying out this action.
+in UML activity diagram.
 
-So in this way, we can describe the process instance
+The technique provides you with a connector, as you can see in the bottom here.
 
-for a certain order, in this case, Anna Andersson's order.
+In this case, you have the circle with an "A" showing that this diagram ends with this "A".
 
-Note here also that the customer info in the diagram
+And then you can continue on the next sheet using the same connector. I will show you.
 
-shows that it was handled in parallel
+Here you can see the connector again on the next sheet being the starting node for the continuation of the diagram.
 
-with some other actions.
-
-But in this actual instance,
-
-update customer input were actually carried out before
-
-the calculate sum of product.
-
-In another process instance, that could be the opposite
-
-or they could be carried out in the same time
-
-if two people are carrying out the different actions.
-
-The last concept I want to introduce is swim lanes
-
-or lanes or partitions.
-
-And they are used to divide activity diagrams
-
-in different parts.
-
-In this case, you can see is three different parts.
-
-And these three parts are called swim lanes or lanes
-
-or partitions.
-
-Actually, UML activity diagram claimed
-
-that there should be called partitions,
-
-but usually people out that do process modeling
-
-usually talk about swim lanes and lanes.
-
-All these lanes are sometimes called a pool.
-
-So you can think of it as a swimming pool
-
-and that swim pool consists of a number
-
-of swim lanes or lanes.
-
-And what does these swim lanes represent?
-
-Well, they could represent the performer,
-
-the performer that carry out the different actions.
-
-So for example, in this case,
-
-the order handling department could perform all the actions
-
-to the left in the left swim lane or in the left lane.
-
-While the delivery department carry out one action,
-
-the one in the bottom called deliver products,
-
-while the sales and marketing department
-
-represent carry out the update customer info.
-
-So you can use these swim lanes or lanes or partitions
-
-to describe which action or activities are carried out
-
-by the different department.
-
-But it doesn't have to be department,
-
-it could actually be roles,
-
-like an order and handling personnel,
-
-or a delivery responsible,
-
-and a sales clerk or something like that.
-
-It could also be the physical person.
-
-For example, the lane to the left
-
-could have the name Anna Andersson,
-
-because she's responsible for handling orders
-
-in this part of the activity.
-
-It is actually possible also that these lanes represent shows which department or roles or individuals that are responsible for the actions.
-
-They are not maybe the one that carry out the actions, but are responsible for the different actions.
+A simple solution provided by using this connector.
