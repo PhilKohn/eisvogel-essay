@@ -1,339 +1,413 @@
 ---
-title: "Presentation: Managing problematic modelling situations with UML activity diagrams"
+title: "Presentation: Requirement modelling with UML use case"
 author: [Chat GPT o1, Noted App, Erik Perjons]
 date: \today
 keywords: [Markdown, Example]
 ---
-# Presentation managing problematic modelling situations with UML activity diagrams
+# Presentation requirement modelling with UML use case
 
 ## ChatGPT o1-preview
 
-**Summary of the Lecture on Managing Problematic Modeling Situations with UML Activity Diagrams**
+**Summary of the Lecture on Requirement Modeling with UML Use Cases by Erik Perjons**
 
-In this lecture, **Erik Perjons** discusses common problematic situations that arise when modeling business processes using UML Activity Diagrams. He presents three specific scenarios and offers alternative solutions for each, highlighting their advantages and drawbacks. The goal is to equip modelers with strategies to handle complex modeling challenges effectively.
+This lecture focuses on the fundamentals of requirement engineering and how UML use case models can support the process. It addresses key questions:
 
----
-
-### **1. Modeling Shared Actions Between Multiple Actors**
-
-**Problem**:
-- How to represent a situation where two different actors (e.g., the restaurant manager and chefs) carry out the **same task together**, such as participating in a meeting after the manager completes administrative tasks.
-
-**Alternative Solutions**:
-
-- **Solution 1: Parallel Actions with AND Split**
-  - **Method**: Use an **AND split** (fork) after the administrative tasks, and place the same action ("Participate in Meeting") in both the restaurant manager's and chefs' swimlanes (partitions).
-  - **Benefit**: Illustrates that both actors are performing the action in parallel.
-  - **Drawback**: It's unclear if they are participating in the **same meeting**, as the action appears separately in each swimlane.
-
-- **Solution 2: Shared Action on Swimlane Border**
-  - **Method**: Position the shared action on the **border** between the two swimlanes.
-  - **Benefit**: Clearly indicates that the action involves both actors simultaneously in the same activity.
-  - **Drawback**: May not be visually appealing, as the action straddles swimlane boundaries, potentially causing confusion.
-
-- **Solution 3: Additional Combined Swimlane**
-  - **Method**: Create an **additional swimlane** that represents activities involving both actors, and place the shared action within this lane.
-  - **Benefit**: Explicitly shows that the action is a joint activity between the restaurant manager and chefs.
-  - **Drawback**: Makes it harder to trace individual roles' actions, as activities are split across multiple swimlanes. It adds complexity to the diagram.
-
-**Conclusion**:
-Each solution effectively models the shared action scenario but comes with trade-offs between clarity and diagram complexity. The choice depends on the modeler's priorities, such as visual aesthetics or the emphasis on collaborative activities.
+- **What is requirement engineering and why is it important?**
+- **How can models be used to support requirement engineering?**
 
 ---
 
-### **2. Modeling Optional and Order-Independent Actions**
+### **1. Understanding Requirement Engineering**
 
-**Problem**:
-- How to represent a situation where an actor may perform two different actions in **any order**, sometimes only one of them, or sometimes none at all.
+- **Definition**:
+  - Requirement engineering is the process of gathering, defining, organizing, and documenting the requirements of a system.
+  - A **requirement** is a desirable property, feature, attribute, quality, or capacity that a system should possess.
 
-**Alternative Solutions**:
+- **Categories of Requirements**:
+  - **Functional Requirements**:
+    - Describe **what** the system should do—the functions it must perform.
+    - **Examples**:
+      - The system should register an order.
+      - It should allow finding a customer by ID or name.
+  - **Non-Functional Requirements**:
+    - Describe **how** the system performs its functions.
+    - Often relate to usability, reliability, security, performance, and platform constraints.
+    - **Examples**:
+      - The system should handle 100 orders in parallel (performance).
+      - It should integrate with Microsoft's platforms (platform constraints).
 
-- **Solution 1: AND Split with XOR Decisions**
-  - **Method**:
-    - Use an **AND split** (fork) to create parallel paths for both actions.
-    - On each path, introduce an **XOR split** (decision node) to decide whether to perform or skip the action.
-    - Each action path rejoins using an **AND join**.
-  - **Benefit**: Captures all possible combinations (both actions, one action, or none) while maintaining parallelism.
-  - **Drawback**: Adds complexity due to multiple splits and joins; may be visually cluttered.
-
-- **Solution 2: XOR Splits Without AND Splits**
-  - **Method**:
-    - Begin with an **XOR split** offering options:
-      - Perform the first action.
-      - Perform the second action.
-      - Perform neither action.
-    - After each action, include another XOR decision to determine if additional actions will be performed.
-    - Paths eventually converge using an **XOR join**.
-  - **Benefit**: Simplifies the diagram by eliminating unnecessary parallel paths.
-  - **Drawback**: Requires careful construction to ensure all possible execution paths are accurately represented.
-
-**Conclusion**:
-Both solutions are valid and can be chosen based on diagram simplicity and clarity. Modelers may also explore other creative approaches to represent such optional and unordered activities, as long as the diagram remains accurate and understandable.
+- **Requirement Specification Document**:
+  - A comprehensive document that includes both functional and non-functional requirements.
+  - Provides **context** for the system:
+    - Defines the problem the system addresses.
+    - Describes the business processes the system supports.
+  - Combines text and models (e.g., UML use case diagrams and descriptions, business process models).
 
 ---
 
-### **3. Managing Diagram Continuation Across Multiple Pages**
+### **2. Importance of Requirement Engineering**
 
-**Problem**:
-- When an activity diagram is too large to fit on a single page, how to continue it onto another sheet while maintaining clarity and flow.
+- **Preventing Project Failures**:
+  - Shortcomings in requirement engineering are a major reason for system development failures.
+  - Common issues include:
+    - **Lack of Requirements Gathering**: Starting development without defined requirements.
+    - **Limited Stakeholder Involvement**: Not involving all user groups, especially end-users.
+    - **Unclear User Needs**: Users may not know or articulate what they need.
+    - **Vague Requirements**: Leading to misinterpretation between business people and developers.
 
-**Solution**:
-
-- **Use of Connectors**:
-  - **Method**:
-    - Place a **connector symbol** (usually a circle with a label, e.g., "A") at the point where the diagram continues.
-    - On the next page, start with the same connector symbol to indicate the resumption of the process flow.
-  - **Benefit**: Provides a clear and standardized way to link sections of the diagram across multiple pages without confusing the reader.
-  - **Implementation**:
-    - Ensure that connectors are uniquely labeled if there are multiple continuation points.
-    - Keep a consistent style for connectors to maintain professional appearance.
-
-**Conclusion**:
-Using connectors is an effective and straightforward method to handle large diagrams. It helps maintain the logical flow of activities across pages without overwhelming a single diagram space.
+- **Driving Development**:
+  - Requirements are central to guiding the development process.
+  - Clear requirements ensure that the final system meets user needs and business goals.
 
 ---
 
-**Overall Takeaways**:
+### **3. Modeling Requirements with UML Use Cases**
 
-- **Flexibility in Modeling**: UML Activity Diagrams offer various ways to represent complex scenarios. Understanding different modeling techniques allows for flexibility in capturing the nuances of business processes.
-- **Balancing Clarity and Complexity**: Each modeling choice involves trade-offs. Modelers should strive for clarity while managing diagram complexity, ensuring that stakeholders can easily interpret the diagrams.
-- **Problem-Solving Approach**: When faced with modeling challenges, consider multiple solutions, assess their pros and cons, and select the one that best fits the context and communication goals.
+- **Purpose of UML Use Cases**:
+  - Provide a visual and textual representation of system functionality from the user's perspective.
+  - Facilitate communication between stakeholders and developers.
 
-By exploring these problematic situations and their solutions, the lecture enhances the modeler's toolkit for effectively representing intricate business processes using UML Activity Diagrams.
+- **Components of a UML Use Case Model**:
+
+  - **Use Case Diagram**:
+    - **Actors**:
+      - Represent users or external systems that interact with the system.
+      - Depicted as stick figures; usually represent a role rather than a specific individual.
+    - **Use Cases**:
+      - Depicted as ellipses with names inside.
+      - Represent the functional requirements—the system's capabilities.
+    - **Associations**:
+      - Lines connecting actors to use cases, indicating interactions.
+    - **Example**:
+      - An actor "Student" interacts with use cases "Register for Course" and "Register for Exam".
+
+  - **Use Case Descriptions**:
+    - Provide detailed textual narratives of each use case.
+    - **Elements**:
+      - **Name**: Should match the use case in the diagram.
+      - **Actor**: Who is involved in the use case.
+      - **Goal**: The objective of the use case.
+      - **Main Scenario**: Step-by-step interaction between the actor and the system.
+    - **Example**:
+      - **Use Case**: Register for Course.
+      - **Main Scenario**:
+        1. Student requests to see available courses.
+        2. System presents the list of courses.
+        3. Student selects a course to register.
+        4. System confirms the registration.
+
+- **Guidelines for Creating Use Case Models**:
+
+  - **Consistency**:
+    - Ensure that each use case in the diagram has a corresponding description with the same name.
+  - **Clarity in Descriptions**:
+    - Clearly specify who (actor or system) performs each step.
+    - Use simple, clear statements to facilitate understanding.
+  - **Communication Tool**:
+    - Use case models should be easily understood by both business stakeholders and developers.
+    - Serve as a bridge between user needs and technical implementation.
+
+---
+
+### **4. Integrating Models into Requirement Engineering**
+
+- **Levels of Modeling**:
+  - Requirement engineering operates across multiple levels in the real world:
+    - **User Interaction Level**: How users interact with the system.
+    - **Business Process Level**: The processes the system supports.
+    - **System Architecture Level**: How the system fits within the existing architecture.
+- **Role of Models**:
+  - Models help represent different aspects of requirements, providing a clearer understanding.
+  - They support the documentation and communication of requirements in both textual and visual formats.
+
+---
+
+### **5. Conclusion and Reflection**
+
+- The lecture emphasizes the critical role of requirement engineering in successful system development.
+- Using UML use case models enhances the requirement engineering process by:
+  - Providing clear, structured representations of system functionality.
+  - Improving communication between users and developers.
+  - Ensuring that all requirements are captured and understood.
+
+**Reflective Questions**:
+
+- **What is requirement engineering, and why is it important?**
+  - It's the foundational process of defining what a system should do and how it should perform, essential for delivering a system that meets user needs.
+- **How can models support requirement engineering?**
+  - Models like UML use case diagrams and descriptions provide visual and textual means to capture and communicate requirements effectively.
+
+---
+
+By understanding and applying the principles of requirement engineering and UML use case modeling, stakeholders can collaborate more effectively, reducing the risk of project failure due to misunderstood or incomplete requirements.
 
 ## Transcript
 
 
-In this presentation, I will present some problematic modeling situations with
+This presentation is about requirement modeling using UML use case. My name is Erik Perjons.
 
-UML activity diagram. I will also discuss how to manage these problematic situations.
+The questions that this presentation will answer are what is requirement engineering
 
-Here is the first problematic modeling situation. The first problematic modeling situation is when
+and why is it important? Finally, how can you use models to support requirement engineering?
 
-two different actors are carrying out the same task, the same action. In this case,
+This picture shows on one side the real world and on the other side the modeling world.
 
-the restaurant manager and the chefs have to have a meeting together after that the
+When you work with requirements, requirements engineering in the real world, you need to
 
-restaurant manager has carried out administration tasks. How do you model that? You can stop
+be on all three levels.
 
-the recording and try to find a solution of your own before I present some alternative
+But in focus is usually the middle layer here, the middle level showing the user interacting
 
-solution to this situation. The first alternative solution is to present
+with the system.
 
-a fork or what we call an AND split.
+But in order to gather the right requirements, you also need to include in which processes
 
-So after that the restaurant manager
+do the system work. Which processes does the system support? We also need to consider the
 
-has carried out the administration task,
+system architecture so that the new system fits nicely into the architecture. That means
 
-we introduce an AND split.
+that requirement engineering should, say, cover many levels in the real world. And that
 
-And then we put the same task or the same action
+also means that you can use different type of models supporting requirements engineering.
 
-in both the restaurant manager and the chefs
+We start with requirements engineering in the real world. First, we try to define requirement
 
-relaying the partition.
+engineering. It's the process of gathering, defining, organizing, documenting and so on
 
-So in this case, we can see that the restaurant manager
+the requirements. But what is a requirement? Well it is a desirable property, feature, attribute,
 
-and the chefs are carrying out a participate in meeting,
+quality or capacity of a system. Requirements are usually categorized in two different categories,
 
-in parallel sort of thing.
+functional and non-functional requirements. Functional requirements are the functions that
 
-The good thing with this solution is to show
+the system should perform. That is, it is that what the system do. Examples of
 
-that both the restaurant manager and the chefs
+functional requirements are that the system should be able to register an
 
-are participate in a meeting.
+order, to register a new customer, it should be possible to find an order in
 
-and do that in parallel.
+the system, it should be possible to find a customer in the system by for
 
-The drawback of course is that we are not totally sure
+example using the customer ID or a customer name. So before you start
 
-that they are participating in the same meeting.
+developing the system you should gather these requirements in a list in order to
 
-Okay, the action has the same name,
+for the system developers to understand what type of functions the system should have.
 
-but we are not sure that they actually carry out
+Non-functional requirements are requirements that describe how the system performs these
 
-the same meeting, even though they have the same name.
+functions. It's usually related to usability, is the system easy to use, reliable security,
 
-Another solution that handled this drawback
+does the system support secure communication, and also platform constraints, performance,
 
-from the previous slide is that we actually put the action
+reliability are important examples of non-functional requirements.
 
-in both the restaurant manager and the chef's name.
+And some more concrete example of non-functional requirements.
 
-So this is an alternative solution.
+The system should be able to handle 100 orders in parallel.
 
-Maybe one drawback here is that we actually have to put
+That has to do with performance.
 
-the action on the border between the restaurant manager
+Or the system should be able to integrate with systems
 
-and the chefs, which might not look so good.
+in the Microsoft's platforms, which has to do with platform constraints.
 
-A third solution is to present an additional lane,
+So in this way, you try to gather these non-functional requirements
 
-an additional partition where you add the action
+and specify them in what is called requirement specification.
 
-participates in meeting.
+And requirement specification is a document where you actually specify
 
-And this lane, this partition,
+the requirements of the system.
 
-include both the restaurant managers and the chefs.
+And the core of this requirement specification
 
-This is a nice solution, but it has a drawback.
+is the functional and non-functional requirements.
 
-So for example, if you want to follow what the chef does,
+But very often, you also include the context
 
-you not only need to follow the lane of the chefs,
+in which these requirements should work.
 
-you also need to go to lanes where the chefs
+And that could be, for example, what problem does
 
-do things together with other actors, with other roles.
+the new system address?
 
-So that's, I can say, it's a drawback with this solution.
+And in which business processes should the system work?
 
-But you can use all these three alternative solutions,
+That means which business processes
 
-and they have some benefit and drawbacks, as you have seen.
+should be supported by this system?
 
-Here is the second problematic modeling situation.
+So it's also important to give the context
 
-Another problematic modeling situation is if an actor or role can carry out two different
+to really understand what these requirements means.
 
-actions in any order.
+and they are usually also a part of a requirement specification.
 
-Sometimes only one of the actions will be carried out and sometimes none.
+This requirement specification could consist of only text,
 
-How do you model that?
+but very common today is that you actually combine text and models.
 
-we can stop the recording and think about a solution for that.
+For example, when you want to describe your function requirements,
 
-This is a solution to the problematic modeling situation.
+you could use what they call UML use case diagram and UML use case description,
 
-We call this alternative one.
+which I will describe later on in this presentation.
 
-In this case, I have introduced a fork or what we call an AND split.
+Also the context for the requirements or for the system could be described using
 
-And if we have an AND split, all the flows after the AND split has to be carried out,
+different kinds of graphical models, for example, business process models.
 
-which means that the left flow or left pass has to be carried out and also the right pass,
+Well, the most important question here is why do we need requirement engineering?
 
-the right flow has to be carried out in the picture and from the read.
+Well, research has shown that the major reason for failure in system development is shortcoming
 
-But this was not the case.
+in requirement engineering.
 
-We said that sometimes only one of the actions will be carried out, and sometimes none.
+And very common is that you actually don't gather any requirements at all before you
 
-How do we handle that?
+start developing the system.
 
-Well, in this case, I have introduced an XOR split after the AND split.
+So it's very common that you create a system which no user actually wants.
 
-If you follow the left flow, the left path here, you can see that after the AND split,
+Another problem is that maybe not all users are being involved in requirement gathering.
 
-we have an XOR split, and we have two conditions.
+For example, maybe you only ask the management of their requirements, but don't ask the people
 
-Either we carry out the task or we don't.
+that actually work in the system day to day.
 
-jump over the tasks. So we will have the same solution on the right
+A third problem is that users often don't know what requirements they want.
 
-flow on the right path. Check the quality of the received food from
+It's very hard for them to state requirements before they actually have worked with the
 
-vendors. So in this case I have handled this situation by using an AND split
+system in a real world setting.
 
-AND or splits two or splits for each path or for each flow.
+It's also often that the requirements are vaguely stated so that the business people
 
-Here we have another solution to the problematic modeling situation. We call
+and the system developers interpret the requirements
 
-the solution alternative queue.
+in different ways.
 
-Here I don't use any AND split, only XOR split.
+But the requirements are very central in system development
 
-So let's check here.
+and are usually things that drive the development process.
 
-The first thing that happened is we actually have
+Now we're going to focus on UML use case.
 
-an XOR join, so we don't have to carry
+And first we introduce the UML use case diagram,
 
-about the first symbol.
+which is shown here.
 
-After that, we have an XOR split.
+Let's check in detail what model element
 
-Either you carry out the administrative task,
+the use case diagram consists of.
 
-or you check the quality of the received goods,
+Well, first we have the actor,
 
-or the third condition, not carry out any task.
+which is the user of the system.
 
-So if none of the tasks will be carried out,
+Usually actor is a role, but it is term actor.
 
-we follow the right path, the right flow here.
+Then we have the use cases, ellipses with a name in it.
 
-If we first carry out the administrative task,
+So in this case, we have two use cases.
 
-we take the left flow, the left path,
+One use case is term registered for course,
 
-and then we carry out administrative task,
+and the other one is term registered for exam.
 
-and again, we have an XOR join, joining the two paths.
+Then we have the association showing that this actor
 
-Then we have another XOR split, where we have two options.
+should be able to work with these two functions
 
-We carry out additional task,
+in the system.
 
-or we're not carrying out any more task.
+More precisely, you can say that the use cases here,
 
-If we carry out additional task, we go to the left.
+the two uses show the functionality of the system.
 
-If we don't carry out any more tasks,
+And then we have the actor working with these functions in the system.
 
-we go straight down in the flow.
+Another part of UML use case is what's called use case description.
 
-And then join the other, the rightmost flow,
+They describe the interaction between the user and the system.
 
-not carrying out any tasks.
+So let's check user descriptions on the side here.
 
-Check this alternative solution.
+We have the name of the use case, register for course.
 
-I think both these solutions are pretty good,
+We have the actor specified, which is the actor that's going to work with it,
 
-both alternative one and alternative two.
+with this function in the system.
 
-There might be additional alternative solutions.
+We have the goal of this function that the student should be able to register for the course.
 
-So you could think to find a third alternative solution,
+And then we have the main scenario showing the interaction between the system and the actor.
 
-try to identify a third alternative solution
+So if we read the main scenario, we can see that first the student wants to see available courses in the system,
 
-for this problematic modeling situation.
+and the system in the next task will present these courses.
 
-Here is the third problematic modeling situation.
+The third task is that student chooses a course, and the fourth task is that the system confirms the registration of the chosen course.
 
-Sometimes when you do modeling,
+So in this way, the main scenario shows the interaction between the user of the system and the system.
 
-there is no more space left on the modeling sheet
+Now we can combine the use case diagram that I showed before with the use case description.
 
-that you use.
+And this combination is called the use case model.
 
-That means that you need to continue on another sheet,
+So we can see here that the use case diagram shows the actor and the two functions that the actor could perform with the system or the two use cases.
 
-on another page.
+Each of these two use cases has its own use case description showing how the user should interact with the system more in detail.
 
-And how do you present that?
+Related now we have some guidelines when we create the use case model. First, each use case in the use case diagram, the two use cases should each have a use case description.
 
-How do you handle that?
+And very important here also that you use the same name
 
-Well, there is actually a very simple solution
+on the use case in the use case diagram
 
-in UML activity diagram.
+as on the use case description.
 
-The technique provides you with a connector, as you can see in the bottom here.
+So we can see here for example,
 
-In this case, you have the circle with an "A" showing that this diagram ends with this "A".
+that we first have the use case registered for course
 
-And then you can continue on the next sheet using the same connector. I will show you.
+in the use case diagram,
 
-Here you can see the connector again on the next sheet being the starting node for the continuation of the diagram.
+and then we have a use case description
 
-A simple solution provided by using this connector.
+with the same name registered for course.
+
+And second use case registered for exam
+
+also have its own use case description
+
+and use the same name on the description.
+
+I also want to add a guideline
+
+when you do your use case description,
+
+which is very important.
+
+When you write your main scenario in the use case description, start specifying which actor
+
+is actually doing things.
+
+In this case, it is either the user or the system, either the student or the system.
+
+And each task should be stated in a very simple statement showing the communication between
+
+the student and the system.
+
+The idea here is that the use case description should be very easy to read, both for the
+
+business people and for the system developers.
+
+And this is an important communication tool between the business people and the system
+
+developers.
+
+Okay, we are back now to the question that I stated in the beginning.
+
+It's now up to you to try to answer this question based on the presentation.
