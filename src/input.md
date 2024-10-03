@@ -1,325 +1,378 @@
 ---
-title: "The Document Title"
-author: [Example Author, Another Author]
+title: "Presentation: Enterprise and Systems Modeling"
+author: [Chat GPT o1, Noted App]
 date: \today
 keywords: [Markdown, Example]
 ---
-# Presentation: Enterprise and Systems Modeling
+# Presentation: More about process modelling with UML activity diagram so 
 
-## ChatGPT o1 - preview:
+## ChatGPT o1-preview
 
-An **enterprise model** is a representation of the structure, activities, processes, information, resources, people, behavior, goals, and constraints of a business, government, or other enterprise. It focuses on the manual activities carried out by people, the communication among them, and the concepts they use within the organization or domain.
+**Summary of the Lecture on Advanced Process Modeling with UML Activity Diagrams**
 
-**Why do we need an enterprise model?**
+This lecture delves into additional modeling elements within UML Activity Diagrams, focusing on enhancing the precision and clarity of process models in enterprise environments. The key topics covered include the distinction between actions and activities, the concept of tokens, understanding process instances, and the use of swimlanes (partitions) to represent different performers or responsible parties within a process.
 
-- **Analysis and Improvement**: It helps in analyzing the current state of an organization to identify problems and areas for improvement.
-- **Designing Better Solutions**: Facilitates the design of new or improved business processes.
-- **Requirement Gathering**: Assists in gathering requirements for new systems that will support the business.
-- **Communication**: Serves as a visual tool for stakeholders to discuss and understand how the business operates and how it can evolve.
+1. **Actions vs. Activities**:
+   - **Action**: Represents a single, atomic step within an activity that cannot be further decomposed. It is the most granular level of behavior in an activity diagram.
+   - **Activity**: Denotes a composite behavior made up of multiple actions and/or other activities. It can be decomposed into smaller actions or activities.
+   - **Notation**: Activities are often indicated by a rectangle with a fork symbol inside, signaling that they contain sub-actions or sub-activities.
 
-A **system model** is a representation of a software or IT system, showing its architecture, components, functions, and the relationships between different modules. It focuses on the automated activities carried out by information systems or software systems.
+2. **Tokens**:
+   - **Definition**: Tokens are abstract representations of control or data values that flow through the activity diagram. They symbolize the dynamic aspect of the process, such as orders, cases, or entities like a patient in a healthcare process.
+   - **Purpose**:
+     - **Validation**: Using tokens helps ensure that the activity diagram is logically sound and correctly modeled. If tokens cannot flow through the diagram without issues, it indicates potential problems in the model.
+     - **Process Instance Visualization**: Tokens aid in visualizing the execution of a specific process instance, tracking the progression of a particular case (e.g., an individual customer order) through the various actions and activities.
+   - **Behavior**: Tokens are consumed and produced as actions and activities are executed, moving through the diagram along the defined control flows.
 
-**Why do we need a system model?**
+3. **Process Instances**:
+   - **Concept**: A process instance refers to a single execution of the process model, representing a specific occurrence (e.g., processing a particular customer's order).
+   - **Visualization with Tokens**: By following the token through the activity diagram, one can trace the exact path taken during a process instance, including decision points and parallel actions.
+   - **Detailed Tracking**: Additional data, such as timestamps, order details, and participant information, can be associated with each action to provide a comprehensive view of the process instance's execution.
 
-- **Analysis of Software Systems**: Helps in understanding and analyzing the existing software systems.
-- **Design and Development**: Aids in designing new systems that optimally support business processes.
-- **Architecture Visualization**: Provides a clear picture of the system's structure and how different parts interact.
-- **Requirement Implementation**: Ensures that the system design aligns with the business requirements gathered from enterprise models.
+4. **Swimlanes (Partitions/Lanes)**:
+   - **Definition**: Swimlanes are visual elements used to partition an activity diagram into separate sections, each representing a different performer, department, role, or responsible entity involved in the process.
+   - **Purpose**:
+     - **Clarifying Responsibilities**: They help clarify who is responsible for each action or activity within the process, enhancing understanding and communication among stakeholders.
+     - **Organizing the Diagram**: Swimlanes provide structure to the activity diagram, making it easier to read and interpret by grouping related actions under their respective performers.
+   - **Notation**: The entire set of swimlanes can be referred to as a "pool," akin to lanes in a swimming pool, with each lane assigned to a specific entity.
 
-**In summary**, enterprise models are crucial for understanding and improving business operations, while system models are essential for designing and analyzing the software systems that support those operations. Both types of models are invaluable tools for communication, planning, and implementation within an organization.
+**Example Application**:
+
+- In a book company process model:
+  - **Actions** like "Calculate Sum for Products" are atomic steps that cannot be broken down further.
+  - **Activities** like "Get Ordered Products" may consist of multiple actions, such as "Find Products in Warehouse" and "Transport Products to Delivery Department."
+  - **Tokens** represent specific orders (e.g., Anna Andersson's order) flowing through the process, consumed and produced by actions, and used to validate the correctness of the diagram.
+  - **Swimlanes** might include partitions for the Order Handling Department, Delivery Department, and Sales & Marketing Department, each responsible for different actions within the process.
+
+**Conclusion**:
+
+Understanding these advanced elements enhances the ability to model complex business processes accurately using UML Activity Diagrams. Actions and activities provide the appropriate level of detail, tokens offer a mechanism for validating process flow and visualizing process instances, and swimlanes clarify responsibilities among various performers in the organization. Mastery of these concepts leads to higher-quality models that effectively communicate the intricacies of enterprise processes.
 
 ## Transcript
 
-Welcome to this presentation about enterprise and system modeling. My name is Erik Parjons.
 
-The question to answer in this presentation is what is an enterprise model and why do you need
+Welcome to this presentation entitled more about process modeling with UML activity diagram.
 
-it? What is a system model and why do you need it? Further we introduce enterprise and system models
+We will here present some additional modeling elements in UML activity diagram.
 
-by showing this picture. On one side of this picture I want to show you the reword. You think
+You recognize, you probably recognize this diagram which we introduced in the first presentation.
 
-it as a real world. You can touch people, buildings, cars and computers. On the other
+And you can also see the name of the different modeling elements that we used or presented
 
-side you have the model world where you actually try to represent the real world by using different
+in the first presentation.
 
-kind of models. The real world I have divided into three levels. The top levels shows manual
+Let's now start introducing some additional modeling elements.
 
-activities carried out by people. It also shows the communication and the concepts used by the people
+Let's start with the distinction between action and activity.
 
-in the organization or in the domain that you want to model.
+An activity diagram can include both activities and actions.
 
-The middle level also shows manual activities, but in this case it's manual activities where you
+Action is a modeling element which represents a single atomic step within an activity.
 
-actually do things with the computer, use the keywords, use the screen, use the mouse.
+That is, an action cannot be further decomposed into more detailed actions.
 
-Finally, in the bottom you show the system, the systems in the real world. In this part
+That is, an action is a single atomic step which cannot be further decomposed into additional
 
-the activities are carried out automatically by information system, IT system or software system.
+more detailed actions.
 
-The top level showing in the real world showing different manual activities could be represented
+An activity on the other hand represents a behavior that is composed of activities and/or
 
-by for example business model showing how people are which activities are carried out and in which
+actions.
 
-order. Also the concepts used the terms and concept used could be modeled using in this case a domain
+Let's check the diagram to the left.
 
-model. Also the interaction with computer could be modeled using different kind of use human
+You can here see two rectangles we draw on the corner.
 
-interaction models for example UML use cases. Finally you could also model the system the systems
+labeled get ordered products and the other calculate sum for products. The
 
-in the real world. You can model them by showing what type of concept the different systems are
+first one get order products is an activity and you can see that by the
 
-using or you can also show how the different objects in the system are interacting when things
+symbol and the fork symbol within the rectangle that shows the user of this
 
-are happening. The upper part here, models that show the manual activities or the way people are
+model that this is an activity that consists of additional activities or
 
-talking in the, communicating in the business are usually called enterprise models. While the
+actions while calculate sum for products is an action which cannot be further
 
-models while the model is showing the system, the IT system, the software system are called system models.
+decomposed into additional actions. Let's check now the first activity, get order products.
 
-We first had to find what we mean by enterprise model.
+We know that it's an activity due to the symbol, the fork symbol, within the rectangle. And to the
 
-It is a representation of the structure activities, processes, information, resources, people,
+right we can see that this activity consists in this case of two actions, find products in warehouse
 
-behavior, goals and constraints of a business, government or another enterprise.
+and transport products to the delivery department. This means that the modern element activity could
 
-And these type of models are very useful for analyzing
+could be sometimes a little bit tricky to use.
 
-organization in order to design a better solution. It could be better than new business processes,
+In this case, you see activity to the left,
 
-but it could also be a software system, an IT system, supporting the business.
+it has start, initial node,
 
-And usually, when you introduce a new IT system, software system in the business,
+it has some modeling element
 
-you usually also change the business processes to really make use of this new system.
+and then test the activity final.
 
-A system model is a representation of the system.
+All these steps are called an activity.
 
-It shows the architectures, which part, which modules exist, and how they're related to each other.
+But in the activity, there are, in this case,
 
-It shows the functions, the activities, and so on in the system.
+an additional activity, get order of products.
 
-And these type of models are very useful for analyzing software system
+And we know that this is an activity
 
-and in order to actually design a software system
+due to the fork symbol within the rectangle.
 
-and actually support the business in an optimal way.
+Let's now check the next modeling element, token.
 
-So now let's go back to the basic.
+A modeling element token is a short term
 
-What is a model?
+for control and data values that flows through an activity.
 
-Well, you can define a model as a structure
+Let's make it more concrete.
 
-that represents the picture, describe a system
+A token could represent many things.
 
-or a certain aspect of a part of the real world.
+Token could represent specific order, Anna Andersson's order.
 
-And this model could be texture,
+It could represent a certain case,
 
-but it can also be graphical.
+for example, Anna Andersson's case.
 
-And we focus on graphical models in this course.
+It could also represent the patient
 
-That means that we actually want to visualize objects,
+which can flow through an activity.
 
-relationships, processes, action,
+For example, Anna Andersson as a patient.
 
-using different kinds of graphical elements.
+Token is consumed and produced in each action activity
 
-It could be boxes, it could be arrows between the boxes.
+in the diagram.
 
-It could be lines, it could be circles and so on.
+And why is it important to understand tokens?
 
-There are two types of models, static or dynamic models.
+Well, they are very useful to see
 
-We start with the static or structured models.
+if the activity diagram that you have created
 
-They specify static aspects of the real world or the system.
+is modeled in a correct way.
 
-Or more precisely, they specify what objects exist in the system or in the real world
+If you cannot use tokens,
 
-and what is their relationships.
+your activity diagram probably has some problem
 
-To state it simple, they answer the question what things exist
+and need to be corrected.
 
-and how these are related to each other.
+So let's now be even more concrete.
 
-Then we have the dynamic behavior models.
+Say that this activity diagram
 
-They specify the dynamic aspects of the real world of the system that you want to model.
+describe an activity in a book company,
 
-They more precisely are specified how does the object and the relationship change
+receive orders, get order products, calculate some and also update customer info and finally deliver the products.
 
-during the life cycle of the system or the changes in the real world.
+Welcome to this present carry out the action deliver products in the bottom
 
-Simply stated they answer the question how does things change.
+because the left path is the tokens are still to go through the left path here. So the next step
 
-There are also two other types of models, assist models and to-be models. Assist models describe
+which is going to happen with this token is that it will be consumed in the get order products
 
-the system of the real world as it is just now, while the to-be models is the future description
+when that action is carried out. In the next action, calculate sum for products.
 
-in a future state of a certain aspect of the real world
+Now we have an all split, so either the token follows the path where the sum is larger than
 
-or the system they want to model.
+thousand or the path where the sum is less or equal to thousand. And in this case,
 
-Now we come to an important question.
+we check the order and see, okay, it is lower than thousand, so we will follow the left path here in
 
-Why do you want to use models?
+in this case, we produce a token in the next action, calculate delivery cost.
 
-Well, it is a very useful means or tool
+And when this action is carried out, the token will be consumed and will be produced in the next
 
-for analyzing part of the real world
+action, calculate total sum. And now it is actually possible to carry out the action,
 
-to identify problems in the system or in a real world.
+deliver products. Because when we have carried out the action, calculate total sum and action,
 
-It also means for gathering requirement on a system.
+update customer info to the right. When those two actions are carried out, the tokens will be
 
-It's very useful for understanding
+consumed in this action and put in the next action delivery products and when that action is finally
 
-how the business works because it visualizes
+carried out tokens in the finally activity. So by using tokens you can check that your
 
-the elements of the real world.
+activity, your activity diagram actually works. It's possible to go through your activity step by
 
-And by using these models, you can easily understand
+step by using a token and if that works your activity diagram probably is of high quality.
 
-what type of requirement you want the system to have.
+If it's not you probably need to reduce some part of your activity diagram.
 
-It's also a means for designing a system.
+We have discussed the concept of process instance earlier in this course. However,
 
-For example, you can use modeling as a first step
+the concept of process instance could be hard to grasp. By using a token you could make the concept
 
-before you start coding the system
+more understandable. The tokens could be used for describing the performance of a certain process
 
-to give the overall architecture,
+instance. To say that we receive an order from Anna Andersson, the tokens can then show which
 
-to provide the overall architecture of the system.
+action and activities are carried out and how long they will be carried out for each action or
 
-And it's a very important means for communication.
+activity. So we can follow the tokens step by step through the process and understand how exactly
 
-It's very easy to gather people around
+this process instance for Anna Andersson's order were carried out.
 
-a graphical model to discuss,
+There are other ways to represent the process instance.
 
-okay, how does the business work today?
+For example, we could present the actions and activities
 
-How do we want it to work?
+carried out for a certain instance
 
-How do we want the future system to be designed?
+and provide information about which date and time they were
 
-When you start modeling, you need a modeling language.
+carried out, as well as other data related
 
-Well, you could skip the modeling language
+to the process instance.
 
-and just draw circles, arrows, rectangles, and so on.
+So if we look at the figures or the diagram to the right,
 
-But the good thing with using a modeling language
+you can see here that the action received order was carried out
 
-is to get a more formalized description
+a certain day during a certain time interval.
 
-of what the different symbol means.
+You can also see the number of the order,
 
-Look at this picture here.
+the name of the customer, the customer number,
 
-You can see that we want to represent the real world
+as well as the product ordered.
 
-by using, for example, static and dynamic models.
+Then after that, we can see that the next things that
 
-Each of these models need a language.
+happened here in this process instance
 
-For example, the static language,
+was to update the customer info.
 
-static models need its language
+And we can see the time interval when that was done.
 
-supporting the construction of a static model.
+After that, we can see that this process instance next action
 
-In the same way, a dynamic model,
+was calculate sum for products.
 
-you should use another language
+And again, we can see the date and the time interval
 
-supporting the construction of a dynamic model.
+for this action, but also the sum.
 
-And these languages then specify certain things.
+And since the sum is over 1,000, it's actually 5,000,
 
-And I had simplified it a little bit
+it's following two actions in the diagram
 
-and stated this language,
+are not carried out.
 
-first of all, specify the abstract syntax.
+we don't need to add the delivery cost
 
-It specified what language concepts are used.
+since the sum is over 1,000.
 
-For example, if you want to describe a behavior model,
+Finally, the last action carried out for this instance
 
-you usually use concepts like action, flow, event, and so on.
+is the delivery product.
 
-If you want to describe the more static system,
+And again, we can see the date and the time interval
 
-The language usually uses concepts like object, class, relationships.
+for carrying out this action.
 
-This is abstract syntax.
+So in this way, we can describe the process instance
 
-We actually define the central concept and usually do that by defining one concept with
+for a certain order, in this case, Anna Andersson's order.
 
-another concept.
+Note here also that the customer info in the diagram
 
-Then you have the concrete syntax.
+shows that it was handled in parallel
 
-We actually describe the different symbols that you should use when you start modeling
+with some other actions.
 
-the system or the real world.
+But in this actual instance,
 
-And so the concrete syntax actually consists of a set of symbols, for example, a rectangle
+update customer input were actually carried out before
 
-or a box or an arrow.
+the calculate sum of product.
 
-And to understand the meaning of these symbols, you have to go to the abstract syntax and
+In another process instance, that could be the opposite
 
-read about it there. Both these parts I usually call in my presentation a modeling element.
+or they could be carried out in the same time
 
-Sometimes it's also called notation. The thing is notation could mean different things. The
+if two people are carrying out the different actions.
 
-notation could mean both the abstract syntax and the concrete syntax or it could only mean the
+The last concept I want to introduce is swim lanes
 
-concrete syntax. So I usually try to use the modeling element to have this more generic
+or lanes or partitions.
 
-concept for abstract syntax and concrete syntax. The modeling language that we are going to use
+And they are used to divide activity diagrams
 
-on this course is UML. It's a general purpose modeling language which was created for modeling,
+in different parts.
 
-for visualizing software systems.
+In this case, you can see is three different parts.
 
-But today, UML is also used for enterprise modeling
+And these three parts are called swim lanes or lanes
 
-to describe the business and organization.
+or partitions.
 
-UML has many different diagrams, actually 13,
+Actually, UML activity diagram claimed
 
-and each provide a certain perspective
+that there should be called partitions,
 
-or focus on a model.
+but usually people out that do process modeling
 
-In my presentation, I usually use
+usually talk about swim lanes and lanes.
 
-diagram and graphical models as synonyms.
+All these lanes are sometimes called a pool.
 
-But actually, UML does not talk that way.
+So you can think of it as a swimming pool
 
-They actually say that you have one model of the system,
+and that swim pool consists of a number
 
-but the different diagrams provide different perspective
+of swim lanes or lanes.
 
-of that model.
+And what does these swim lanes represent?
 
-So we can see here that UML has 13 diagrams, they have 6 structured diagrams and 7 behavior diagrams
+Well, they could represent the performer,
 
-and we're going to go through 3 of these diagram types in this course.
+the performer that carry out the different actions.
 
-Class diagram, activity diagram and use cases.
+So for example, in this case,
 
-Finally, we are back to the questions that we wanted to answer in this presentation
+the order handling department could perform all the actions
 
-and it's now your turn to try to answer this question.
+to the left in the left swim lane or in the left lane.
 
-What is an enterprise model? Why do we need it? What is a system model and why do we need it?
+While the delivery department carry out one action,
 
-.
+the one in the bottom called deliver products,
+
+while the sales and marketing department
+
+represent carry out the update customer info.
+
+So you can use these swim lanes or lanes or partitions
+
+to describe which action or activities are carried out
+
+by the different department.
+
+But it doesn't have to be department,
+
+it could actually be roles,
+
+like an order and handling personnel,
+
+or a delivery responsible,
+
+and a sales clerk or something like that.
+
+It could also be the physical person.
+
+For example, the lane to the left
+
+could have the name Anna Andersson,
+
+because she's responsible for handling orders
+
+in this part of the activity.
+
+It is actually possible also that these lanes represent shows which department or roles or individuals that are responsible for the actions.
+
+They are not maybe the one that carry out the actions, but are responsible for the different actions.
