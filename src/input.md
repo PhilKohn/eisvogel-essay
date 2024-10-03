@@ -4,410 +4,277 @@ author: [Chat GPT o1, Noted App, Erik Perjons]
 date: \today
 keywords: [Markdown, Example]
 ---
-# Presentation requirement modelling with UML use case
+# Presentation: Software engineering a brief introduction
 
 ## ChatGPT o1-preview
 
-**Summary of the Lecture on Requirement Modeling with UML Use Cases by Erik Perjons**
+Software engineering is a branch of computer science that focuses on applying principles and practices to guide the development of large, complex software systems. It involves a systematic approach to the entire software development lifecycle, including the following key phases:
 
-This lecture focuses on the fundamentals of requirement engineering and how UML use case models can support the process. It addresses key questions:
+- **Requirement Engineering**: Defining what the system should do by gathering and analyzing the needs of stakeholders, such as users, business analysts, and managers.
 
-- **What is requirement engineering and why is it important?**
-- **How can models be used to support requirement engineering?**
+- **Design and Development**: Creating the overall architecture of the system, determining the modules it should consist of, and how these modules will interact.
 
----
+- **Implementation**: Writing the actual code and building databases to bring the software design to life.
 
-### **1. Understanding Requirement Engineering**
+- **Testing and Deployment**: Verifying that the software meets the specified requirements and integrating it into the organization's existing processes and systems.
 
-- **Definition**:
-  - Requirement engineering is the process of gathering, defining, organizing, and documenting the requirements of a system.
-  - A **requirement** is a desirable property, feature, attribute, quality, or capacity that a system should possess.
+An important aspect of software engineering is the use of **prototypes**—early models of the final system that focus on specific features or functionalities. Prototypes help developers and designers understand potential issues and gather user feedback early in the development process.
 
-- **Categories of Requirements**:
-  - **Functional Requirements**:
-    - Describe **what** the system should do—the functions it must perform.
-    - **Examples**:
-      - The system should register an order.
-      - It should allow finding a customer by ID or name.
-  - **Non-Functional Requirements**:
-    - Describe **how** the system performs its functions.
-    - Often relate to usability, reliability, security, performance, and platform constraints.
-    - **Examples**:
-      - The system should handle 100 orders in parallel (performance).
-      - It should integrate with Microsoft's platforms (platform constraints).
+**Stakeholder involvement** is crucial throughout the development cycle to ensure the software meets the needs of all parties involved, including users, developers, maintenance personnel, and executives. This collaborative approach increases the likelihood of creating a system that is both effective and user-friendly.
 
-- **Requirement Specification Document**:
-  - A comprehensive document that includes both functional and non-functional requirements.
-  - Provides **context** for the system:
-    - Defines the problem the system addresses.
-    - Describes the business processes the system supports.
-  - Combines text and models (e.g., UML use case diagrams and descriptions, business process models).
+After deployment, software often enters a **maintenance phase**, where it is updated and improved based on user feedback and changing business requirements. Designing software that is easy to maintain is essential, as this phase can be costly and time-consuming.
 
----
+Software engineering also utilizes various tools to support development, such as:
 
-### **2. Importance of Requirement Engineering**
+- **Integrated Development Environments (IDEs)**: Platforms that combine different tools for coding, debugging, and managing software projects.
 
-- **Preventing Project Failures**:
-  - Shortcomings in requirement engineering are a major reason for system development failures.
-  - Common issues include:
-    - **Lack of Requirements Gathering**: Starting development without defined requirements.
-    - **Limited Stakeholder Involvement**: Not involving all user groups, especially end-users.
-    - **Unclear User Needs**: Users may not know or articulate what they need.
-    - **Vague Requirements**: Leading to misinterpretation between business people and developers.
+- **Modeling Tools**: Software like Visio or ArgoUML used for creating graphical representations of the system's design.
 
-- **Driving Development**:
-  - Requirements are central to guiding the development process.
-  - Clear requirements ensure that the final system meets user needs and business goals.
+- **Model-Driven Development (MDD) Tools**: Tools that generate code and user interfaces from graphical models, sometimes allowing developers to create entire systems without writing code manually.
 
----
-
-### **3. Modeling Requirements with UML Use Cases**
-
-- **Purpose of UML Use Cases**:
-  - Provide a visual and textual representation of system functionality from the user's perspective.
-  - Facilitate communication between stakeholders and developers.
-
-- **Components of a UML Use Case Model**:
-
-  - **Use Case Diagram**:
-    - **Actors**:
-      - Represent users or external systems that interact with the system.
-      - Depicted as stick figures; usually represent a role rather than a specific individual.
-    - **Use Cases**:
-      - Depicted as ellipses with names inside.
-      - Represent the functional requirements—the system's capabilities.
-    - **Associations**:
-      - Lines connecting actors to use cases, indicating interactions.
-    - **Example**:
-      - An actor "Student" interacts with use cases "Register for Course" and "Register for Exam".
-
-  - **Use Case Descriptions**:
-    - Provide detailed textual narratives of each use case.
-    - **Elements**:
-      - **Name**: Should match the use case in the diagram.
-      - **Actor**: Who is involved in the use case.
-      - **Goal**: The objective of the use case.
-      - **Main Scenario**: Step-by-step interaction between the actor and the system.
-    - **Example**:
-      - **Use Case**: Register for Course.
-      - **Main Scenario**:
-        1. Student requests to see available courses.
-        2. System presents the list of courses.
-        3. Student selects a course to register.
-        4. System confirms the registration.
-
-- **Guidelines for Creating Use Case Models**:
-
-  - **Consistency**:
-    - Ensure that each use case in the diagram has a corresponding description with the same name.
-  - **Clarity in Descriptions**:
-    - Clearly specify who (actor or system) performs each step.
-    - Use simple, clear statements to facilitate understanding.
-  - **Communication Tool**:
-    - Use case models should be easily understood by both business stakeholders and developers.
-    - Serve as a bridge between user needs and technical implementation.
-
----
-
-### **4. Integrating Models into Requirement Engineering**
-
-- **Levels of Modeling**:
-  - Requirement engineering operates across multiple levels in the real world:
-    - **User Interaction Level**: How users interact with the system.
-    - **Business Process Level**: The processes the system supports.
-    - **System Architecture Level**: How the system fits within the existing architecture.
-- **Role of Models**:
-  - Models help represent different aspects of requirements, providing a clearer understanding.
-  - They support the documentation and communication of requirements in both textual and visual formats.
-
----
-
-### **5. Conclusion and Reflection**
-
-- The lecture emphasizes the critical role of requirement engineering in successful system development.
-- Using UML use case models enhances the requirement engineering process by:
-  - Providing clear, structured representations of system functionality.
-  - Improving communication between users and developers.
-  - Ensuring that all requirements are captured and understood.
-
-**Reflective Questions**:
-
-- **What is requirement engineering, and why is it important?**
-  - It's the foundational process of defining what a system should do and how it should perform, essential for delivering a system that meets user needs.
-- **How can models support requirement engineering?**
-  - Models like UML use case diagrams and descriptions provide visual and textual means to capture and communicate requirements effectively.
-
----
-
-By understanding and applying the principles of requirement engineering and UML use case modeling, stakeholders can collaborate more effectively, reducing the risk of project failure due to misunderstood or incomplete requirements.
+In summary, software engineering is about applying structured methodologies and tools to efficiently develop software systems that meet the complex needs of users and organizations.
 
 ## Transcript
 
 
-This presentation is about requirement modeling using UML use case. My name is Erik Perjons.
+Welcome to this presentation about software engineering. It's actually a brief introduction
 
-The questions that this presentation will answer are what is requirement engineering
+to software engineering because many of the presentation and information in this course
 
-and why is it important? Finally, how can you use models to support requirement engineering?
+is actually part of software engineering. So in this presentation I will just introduce
 
-This picture shows on one side the real world and on the other side the modeling world.
+some basic concepts that could be useful in the course. The question to answer after watching
 
-When you work with requirements, requirements engineering in the real world, you need to
+this presentation is what is software engineering.
 
-be on all three levels.
+We start with the definition from the coursebook.
 
-But in focus is usually the middle layer here, the middle level showing the user interacting
+Software engineering is the branch of computer science that seeks principles to guide the development of large complex software system.
 
-with the system.
+This definition emphasizes the need of principles to guide the software development and the focus is on large complex software system.
 
-But in order to gather the right requirements, you also need to include in which processes
+There are many sub-disciplines or sub-branches of software engineering, for example, requirement engineering, software and system design and development,
 
-do the system work. Which processes does the system support? We also need to consider the
+software and system testing,
 
-system architecture so that the new system fits nicely into the architecture. That means
+software and system maintenance.
 
-that requirement engineering should, say, cover many levels in the real world. And that
+The two terms, software and systems,
 
-also means that you can use different type of models supporting requirements engineering.
+are often used as synonyms.
 
-We start with requirements engineering in the real world. First, we try to define requirement
+Sometimes people talk about software design and development,
 
-engineering. It's the process of gathering, defining, organizing, documenting and so on
+and other times,
 
-the requirements. But what is a requirement? Well it is a desirable property, feature, attribute,
+people talk about system design and development.
 
-quality or capacity of a system. Requirements are usually categorized in two different categories,
+And I will also use these two terms
 
-functional and non-functional requirements. Functional requirements are the functions that
+as synonyms in this presentation.
 
-the system should perform. That is, it is that what the system do. Examples of
+An important part of software engineering
 
-functional requirements are that the system should be able to register an
+is the development of software,
 
-order, to register a new customer, it should be possible to find an order in
+usually called system development or software development.
 
-the system, it should be possible to find a customer in the system by for
+And it is the creation and construction
 
-example using the customer ID or a customer name. So before you start
+of software, of the system,
 
-developing the system you should gather these requirements in a list in order to
+and it's usually described as a set of phases or activities.
 
-for the system developers to understand what type of functions the system should have.
+which phases or activities that should be included
 
-Non-functional requirements are requirements that describe how the system performs these
+in the system development differs from different
 
-functions. It's usually related to usability, is the system easy to use, reliable security,
+organization and in different books.
 
-does the system support secure communication, and also platform constraints, performance,
+But usually it's include a phase called
 
-reliability are important examples of non-functional requirements.
+requirement engineering, where you actually define
 
-And some more concrete example of non-functional requirements.
+what system you want to build and how you want
 
-The system should be able to handle 100 orders in parallel.
+the system to function.
 
-That has to do with performance.
+Another important phase is the design phase,
 
-Or the system should be able to integrate with systems
+where you actually design the overall architecture
 
-in the Microsoft's platforms, which has to do with platform constraints.
+and structure of the system.
 
-So in this way, you try to gather these non-functional requirements
+What type of module should the system consist of
 
-and specify them in what is called requirement specification.
+and how should these modules be related?
 
-And requirement specification is a document where you actually specify
+The third phase, which is common in system development
 
-the requirements of the system.
+process is the implementation phase where you actually code the system and build the
 
-And the core of this requirement specification
+database. Finally, you test and deploy the system, meaning that you test if the system
 
-is the functional and non-functional requirements.
+fulfill the requirement that you have defined in the beginning, and also you introduce the
 
-But very often, you also include the context
+system in the organization and integrate it with the business processes of the organization
 
-in which these requirements should work.
+and with other ecosystem that you have. When you talk about system development, you often
 
-And that could be, for example, what problem does
+need the term prototype. There is no real agreement on what the prototype is, but it
 
-the new system address?
+can be seen as an early form of the final system,
 
-And in which business processes should the system work?
+where you focus on certain aspects of it.
 
-That means which business processes
+For example, it could be a drawing on a paper
 
-should be supported by this system?
+showing the user interface,
 
-So it's also important to give the context
+as the picture here on the side,
 
-to really understand what these requirements means.
+but it could also be an actual software system,
 
-and they are usually also a part of a requirement specification.
+but with limited functionality,
 
-This requirement specification could consist of only text,
+where you focus on, for example,
 
-but very common today is that you actually combine text and models.
+performance or security or some other aspects
 
-For example, when you want to describe your function requirements,
+before you build the final system.
 
-you could use what they call UML use case diagram and UML use case description,
+It's very useful to construct a prototype,
 
-which I will describe later on in this presentation.
+because it's an enabler to designer and developers
 
-Also the context for the requirements or for the system could be described using
+to better understand what problem you can have
 
-different kinds of graphical models, for example, business process models.
+when you start developing the final system.
 
-Well, the most important question here is why do we need requirement engineering?
+And it's also a very good tool to get user feedback
 
-Well, research has shown that the major reason for failure in system development is shortcoming
+early in the development process.
 
-in requirement engineering.
+So in many cases, people use the prototype
 
-And very common is that you actually don't gather any requirements at all before you
+as the first things to do in the software
 
-start developing the system.
+and system development process.
 
-So it's very common that you create a system which no user actually wants.
+Another term that you often meet in software engineering
 
-Another problem is that maybe not all users are being involved in requirement gathering.
+is stakeholders, and they could be defined as people
 
-For example, maybe you only ask the management of their requirements, but don't ask the people
+or roles that have an interest in the software system
 
-that actually work in the system day to day.
+that will be developed.
 
-A third problem is that users often don't know what requirements they want.
+It could be future users, it could be business analysts,
 
-It's very hard for them to state requirements before they actually have worked with the
+for example, analysts that gather the requirements
 
-system in a real world setting.
+the system and also understand, try to understand how this system actually will support the
 
-It's also often that the requirements are vaguely stated so that the business people
+business processes of the organization. We also have software developers, the people
 
-and the system developers interpret the requirements
+that are actually going to construct or code the system. We have IT support and maintenance
 
-in different ways.
+personnel that will maintain the system. We have manager, executives and owners which
 
-But the requirements are very central in system development
+also have an interest in the system. And it's very important to involve all these stakeholders
 
-and are usually things that drive the development process.
+in the software development or system development process so they can provide you with your
 
-Now we're going to focus on UML use case.
+requirements and also feedback during the development.
 
-And first we introduce the UML use case diagram,
+This will presidential
 
-which is shown here.
+Impact during the development. This will increase the possibility to actually create the right system and not the system that people do not want to use.
 
-Let's check in detail what model element
+.
 
-the use case diagram consists of.
+And you see here on the diagram that after that the software has been developed people start using the system and
 
-Well, first we have the actor,
+They often notice that some part doesn't work so well or they are missing important functionality. For example searching for a certain customer
 
-which is the user of the system.
+So then what needs to happen is that
 
-Usually actor is a role, but it is term actor.
+The software need to be corrected or updated with new functions and this phase is usually called maintenance and this is a very costly phase
 
-Then we have the use cases, ellipses with a name in it.
+So if you so it's very important when you develop the system that you actually consider the maintenance of the system
 
-So in this case, we have two use cases.
+Have I really created a system that are easy to maintain?
 
-One use case is term registered for course,
+Because people when they start using the system want additional functionality very often and also the business often change
 
-and the other one is term registered for exam.
+So you need to adapt your system to the change in the business
 
-Then we have the association showing that this actor
+And as you can see in this diagram finally you withdraw the system and create a new one
 
-should be able to work with these two functions
+Which will replace the old one. Finally, I will introduce some type of tools that support the software engineering work
 
-in the system.
+Integrated development environment IDE is an environment that combines different kinds of tools for developing a software
 
-More precisely, you can say that the use cases here,
+It provides a single integrated package to the developers
 
-the two uses show the functionality of the system.
+so the developers for example could have a
 
-And then we have the actor working with these functions in the system.
+Certain part of the system where you actually can find the modules that you want to work on or that you want to check
 
-Another part of UML use case is what's called use case description.
+In other parts of this application or tool you can sort of say do the coding and then in the third part you maybe do the debugging
 
-They describe the interaction between the user and the system.
+A very interesting example of an IDE is the so-called Eclipse platform, which is an open source environment
 
-So let's check user descriptions on the side here.
+which actually provide a number of plugins to your IDE.
 
-We have the name of the use case, register for course.
+Which means that if you, for example,
 
-We have the actor specified, which is the actor that's going to work with it,
+want to develop your system using graphical models
 
-with this function in the system.
+as the base or as the beginning,
 
-We have the goal of this function that the student should be able to register for the course.
+you can use these plugins.
 
-And then we have the main scenario showing the interaction between the system and the actor.
+For example, on the right side here,
 
-So if we read the main scenario, we can see that first the student wants to see available courses in the system,
+you can see that you can start building your system
 
-and the system in the next task will present these courses.
+by introducing some graphical parts and even names
 
-The third task is that student chooses a course, and the fourth task is that the system confirms the registration of the chosen course.
+before you then generating the code.
 
-So in this way, the main scenario shows the interaction between the user of the system and the system.
+Modeling tools are very popular
 
-Now we can combine the use case diagram that I showed before with the use case description.
+when you want to model your system,
 
-And this combination is called the use case model.
+graphically. For example, you can use Visio, ArgoUML to do UML modeling, which means that
 
-So we can see here that the use case diagram shows the actor and the two functions that the actor could perform with the system or the two use cases.
+you actually start drawing graphical models on a high level before you then start coding
 
-Each of these two use cases has its own use case description showing how the user should interact with the system more in detail.
+the system. Model-driven development tools are tools that support generation of code
 
-Related now we have some guidelines when we create the use case model. First, each use case in the use case diagram, the two use cases should each have a use case description.
+and user interface based on these graphical models that I talked about earlier. There
 
-And very important here also that you use the same name
+are actually tools which provide you with the possibility to develop the whole system
 
-on the use case in the use case diagram
+without writing one line of code. You just use graphical elements and then generate code
 
-as on the use case description.
+from these graphical elements.
 
-So we can see here for example,
+The last term is case tool, and these tools are sometimes seen
 
-that we first have the use case registered for course
+as predecessors to IDE or MDD tools.
 
-in the use case diagram,
+Others see them as a more generic name for IDE and MDD.
 
-and then we have a use case description
+So case tools is a term that can have different meanings
 
-with the same name registered for course.
+for different people.
 
-And second use case registered for exam
+We are back now to the answer, question to answer
 
-also have its own use case description
+from this presentation.
 
-and use the same name on the description.
+What is software engineering?
 
-I also want to add a guideline
-
-when you do your use case description,
-
-which is very important.
-
-When you write your main scenario in the use case description, start specifying which actor
-
-is actually doing things.
-
-In this case, it is either the user or the system, either the student or the system.
-
-And each task should be stated in a very simple statement showing the communication between
-
-the student and the system.
-
-The idea here is that the use case description should be very easy to read, both for the
-
-business people and for the system developers.
-
-And this is an important communication tool between the business people and the system
-
-developers.
-
-Okay, we are back now to the question that I stated in the beginning.
-
-It's now up to you to try to answer this question based on the presentation.
+And you can now try to answer that question.
