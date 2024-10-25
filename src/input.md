@@ -31,7 +31,7 @@ Da Philipp im Home-Office arbeitet, ist der Hund niemals über längere Zeit all
 
 In der Umgebung unserer Wohnung bestehen zahlreiche Möglichkeiten für Spaziergänge, wie das nahegelegene Baumschulwäldchen und der Endenicher Stadtpark, sodass auch der Bedarf an Auslauf auf schonende Weise gedeckt wird.
 
-Wir bitten Sie daher, die Hundehaltung rechtsgemäß individuell zu prüfen und uns eine schriftliche Erlaubnis zu erteilen. Sollte innerhalb eines Monats keine Rückmeldung erfolgen, würden wir die Angelegenheit gerne mit rechtlichem Rat nochmals prüfen lassen. Für Rückfragen stehe ich Ihnen selbstverständlich jederzeit zur Verfügung.
+Wir bitten Sie daher, die Hundehaltung rechtsgemäß individuell zu prüfen und uns eine schriftliche Erlaubnis zu erteilen. Sollte innerhalb eines Monats keine Rückmeldung erfolgen, gehen wir davon aus dass uns eine Genehmigung verweigert wird. In dem Fall würden wir die Angelegenheit rechtlich prüfen lassen. Für Rückfragen stehe ich Ihnen selbstverständlich jederzeit zur Verfügung.
 
 Vielen Dank für Ihre Zeit und Ihre Unterstützung.
 
