@@ -1,7 +1,7 @@
 ---
 title: "Antrag auf Tierhaltung"
-author: Nicole Lichter, Philipp Kohn
-date: \renewcommand{\today}{\number\day.\number\month.\number\year}
+author: [Nicole Lichter, Philipp Kohn]
+date: "25.10.2024"
 keywords: [Markdown, Example]
 ---
 
