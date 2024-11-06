@@ -12,8 +12,8 @@ titlepage: true
 titlepage-text-color: 
 titlepage-rule-color: 
 titlepage-rule-height: 
-titlepage-logo: "logo.pdf"
-logo-width: 30mm
+titlepage-logo: "src/assets/logo.pdf"
+logo-width: 60mm
 ---
 
 Frau Heidrun Kopp
