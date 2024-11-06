@@ -9,9 +9,9 @@ lang: "en"
 toc: true
 toc-own-page: true
 titlepage: true
-titlepage-text-color: 
-titlepage-rule-color: 
-titlepage-rule-height: 
+titlepage-text-color: "000000"
+titlepage-rule-color: "000000"
+titlepage-rule-height: 2
 titlepage-logo: "src/assets/logo.png"
 logo-width: 60mm
 bibliography: src/assets/bibtex.bib
