@@ -1,8 +1,19 @@
 ---
-title: "Antrag auf Tierhaltung"
-author: [Nicole Lichter, Philipp Kohn]
-date: "25.10.2024"
+title: "Vinaque sanguine metuenti cuiquam Alcyone fixus"
+author: [Philipp Kohn]
+date: \today
+subject: "Markdown"
 keywords: [Markdown, Example]
+subtitle: "Aesculeae domus vincemur et Veneris adsuetus lapsum"
+lang: "en"
+toc: true
+toc-own-page: true
+titlepage: true
+titlepage-text-color: 
+titlepage-rule-color: 
+titlepage-rule-height: 
+titlepage-logo: "logo.pdf"
+logo-width: 30mm
 ---
 
 Frau Heidrun Kopp
