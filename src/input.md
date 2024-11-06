@@ -14,6 +14,8 @@ titlepage-rule-color:
 titlepage-rule-height: 
 titlepage-logo: "src/assets/logo.png"
 logo-width: 60mm
+bibliography: src/assets/bibtex.bib
+csl: 
 ---
 
 Frau Heidrun Kopp
