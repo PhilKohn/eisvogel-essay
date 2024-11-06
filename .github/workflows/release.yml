@@ -1,5 +1,23 @@
-- name: Release
+name: compile pdf
+
+on: release
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-20.04
+    container: 
+      image: pandoc/extra
+
+    steps:
+      # checkout repo contents
+      - uses: actions/checkout@v4
+
+      # run pandoc to generate pdf from markdown
+      - name: run pandoc
+        run: |
+          pandoc --verbose "./src/input.md" -o "output.pdf" --template /.pandoc/templates/eisvogel.latex
+      - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: src/output.pdf
+          files: output.pdf
