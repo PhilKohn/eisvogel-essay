@@ -12,7 +12,7 @@ titlepage: true
 titlepage-text-color: 
 titlepage-rule-color: 
 titlepage-rule-height: 
-titlepage-logo: "src/assets/logo.pdf"
+titlepage-logo: "src/assets/logo.png"
 logo-width: 60mm
 ---
 
