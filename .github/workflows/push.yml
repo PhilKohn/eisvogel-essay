@@ -12,13 +12,30 @@ jobs:
       # checkout repo contents
       - uses: actions/checkout@v4
 
-      # Make script executable
-      - name: Make script executable
-        run: chmod +x ./pandoc-commands.sh
+      # Debug: List directory contents and check file existence
+      - name: Check files and directories
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Directory contents:"
+          ls -la
+          echo "Script status:"
+          if [ -f "./pandoc-commands.sh" ]; then
+            echo "Script exists"
+          else
+            echo "Script does not exist"
+          fi
 
-      # run pandoc using external script
+      # Make script executable with explicit path
+      - name: Make script executable
+        run: |
+          chmod +x ./pandoc-commands.sh
+          ls -la ./pandoc-commands.sh
+
+      # Run pandoc using bash explicitly
       - name: run pandoc
-        run: ./pandoc-commands.sh
+        shell: bash
+        run: bash ./pandoc-commands.sh
 
       # output generated file to build artifacts
       - uses: actions/upload-artifact@v4
