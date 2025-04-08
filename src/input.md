@@ -1,40 +1,11 @@
+# Lorem Ipsum
 
-Frau Heidrun Kopp
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in placerat felis. Vivamus aliquam mattis est, in gravida neque feugiat a. In nec nibh gravida, sollicitudin libero quis, viverra nisi. Quisque aliquet porta pellentesque. Curabitur fermentum ullamcorper tortor, at tincidunt orci pretium in. Cras nulla nibh, consequat sed tellus ac, tempus finibus quam. Morbi venenatis maximus tellus, vitae pretium felis hendrerit nec.
 
-Herr Andreas Binner
+Vivamus in turpis facilisis, ullamcorper eros sit amet, volutpat libero. Nulla tristique ultrices libero eget bibendum. Nullam nibh lorem, tempus quis cursus ut, mattis eget nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam fermentum elit sit amet turpis placerat tristique. Integer molestie tellus ut libero finibus, vitae ultrices ex consectetur. Nunc bibendum dolor eget diam gravida sagittis. Mauris dapibus scelerisque metus id fringilla. Vestibulum sagittis suscipit urna eu interdum. Suspendisse ultrices pulvinar tellus non gravida. Aliquam malesuada lobortis magna vitae lacinia. Morbi auctor dui magna, in feugiat ipsum facilisis et. Vestibulum porta molestie lorem eget ultricies. Vivamus laoreet, sapien id tincidunt iaculis, arcu sem placerat purus, vitae suscipit enim urna in eros. Sed accumsan lacinia erat, at tincidunt quam mollis eget.
 
-Schwalbenweg 5a,
+Nulla congue augue sed arcu molestie, a fermentum mi posuere. Nullam magna nibh, mattis sed dignissim eu, imperdiet vehicula lorem. Cras gravida massa sed lectus hendrerit, vel congue metus bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse purus risus, sagittis at justo sagittis, aliquam malesuada purus. Quisque vitae elit nunc. Praesent a consectetur orci, at hendrerit lorem.
 
-51373 Leverkusen
+Curabitur vitae sapien eu odio aliquet cursus ut et elit. Aenean bibendum vestibulum maximus. Donec sollicitudin vehicula finibus. In elementum odio tincidunt ornare commodo. Mauris quis orci sit amet urna venenatis vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet vel ipsum vitae egestas. Donec accumsan pulvinar nulla, in feugiat velit vulputate non. Maecenas rutrum neque ipsum, a euismod nulla mollis vel.
 
-
-
-
-# Antrag auf Tierhaltung
-
-
-Sehr geehrte Frau Kopp, sehr geehrter Herr Binner,
-
-hiermit möchten wir Ihnen mitteilen, dass wir beabsichtigen, ab dem 16.11.2024 ein Hundeweibchen der Rasse Shiba Inu mit einer voraussichtlichen Schulterhöhe von etwa 37 cm und einem Gewicht von rund 8 kg in unserer Mietwohnung (Jonas-Cahn-Straße 9, 53115 Bonn) zu halten.
-
-In einem kürzlichen Telefonat hatten wir uns bereits über das Thema Hundehaltung ausgetauscht, wobei Sie auf ein grundsätzliches Haustierverbot in Ihren Immobilien hingewiesen haben. Nach eingehender Recherche konnten wir jedoch feststellen, dass ein pauschales Verbot der Hundehaltung ohne hinreichende Begründung rechtlich nicht haltbar ist und weder durch den Mietvertrag (§25) noch durch die Hausordnung (Punkt 6) durchgesetzt werden kann. Daher bitten wir Sie, uns Ihre Entscheidung in Ihrem Antwortschreiben nachvollziehbar zu begründen und darzulegen, inwiefern Ihre Interessen und/oder die Interessen der Anwohner durch die Haltung eines Hundes beeinträchtigt werden könnten.
-
-Zwar handelt es sich bei einem Hund nicht um ein erlaubnisfreies Kleintier, jedoch ist in unserem Fall die Hundehaltung dem bestimmungsgemäßen Gebrauch der Mietwohnung zuzuordnen (§ 535 Abs. 1 Satz 2 BGB). Der Shiba Inu, den wir anschaffen möchten, ist für sein ruhiges und sauberes Wesen bekannt. Diese Hunderasse zeichnet sich durch eine hohe Anpassungsfähigkeit aus, bellt selten und fühlt sich auch in kleineren Wohnungen wohl, was ihn ideal für das Leben in einer städtschen Wohnung macht. Wir sind überzeugt, dass diese Eigenschaften eine angenehme Wohnsituation fördern und unsere Nachbarn dadurch nicht beeinträchtigt werden.
-
-Da Philipp im Home-Office arbeitet, ist der Hund niemals über längere Zeit alleine und stets betreut. Der Hund ist zudem bei Übergabe durch den professionellen Züchter bereits stubenrein erzogen und ausgiebig sozialisiert worden. Uns ist die Verantwortung, die eine Hundehaltung mit sich bringt, sehr bewusst, und wir beabsichtigen, eine Hundehaftpflichtversicherung abzuschließen, um eventuelle Schäden abzusichern. Außerdem verfügen wir über Erfahrung in der Hundehaltung und können das Tier artgerecht versorgen.
-
-In der Umgebung unserer Wohnung bestehen zahlreiche Möglichkeiten für Spaziergänge, wie das nahegelegene Baumschulwäldchen und der Endenicher Stadtpark, sodass auch der Bedarf an Auslauf auf schonende Weise gedeckt wird.
-
-Wir bitten Sie daher, die Hundehaltung rechtsgemäß individuell zu prüfen und uns eine schriftliche Erlaubnis zu erteilen. Sollte innerhalb eines Monats keine Rückmeldung erfolgen, gehen wir davon aus, dass uns eine Genehmigung verweigert wird. In dem Fall würden wir die Angelegenheit rechtlich prüfen lassen. Für Rückfragen stehe ich Ihnen selbstverständlich jederzeit zur Verfügung.
-
-Vielen Dank für Ihre Zeit und Ihre Unterstützung.
-
-
-
-Mit freundlichen Grüßen,
-
-Nicole Lichtner und Philipp Kohn
-
-+49 172 7742280
-
-philipp.kohn@icloud.com
+Pellentesque facilisis arcu in dictum venenatis. In imperdiet orci non lectus pulvinar, eget viverra sem aliquam. Duis velit nisi, viverra vel tortor non, dignissim malesuada nisl. Nam sapien diam, pulvinar et tincidunt eu, ullamcorper nec lectus. Suspendisse potenti. Fusce dictum neque in ullamcorper tempus. Curabitur justo turpis, finibus vitae massa non, sodales consectetur ligula.
