@@ -21,7 +21,7 @@ jobs:
         run: ./pandoc-commands.sh
 
       # output generated file to build artifacts
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: output
           path: "output.pdf"
