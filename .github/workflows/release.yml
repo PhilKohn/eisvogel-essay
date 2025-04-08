@@ -16,9 +16,9 @@ jobs:
       - name: Make script executable
         run: chmod +x ./pandoc-commands.sh
 
-      # run pandoc using external script
+      # run pandoc using sh
       - name: run pandoc
-        run: ./pandoc-commands.sh
+        run: sh ./pandoc-commands.sh
 
       - name: Release
         uses: softprops/action-gh-release@v2
