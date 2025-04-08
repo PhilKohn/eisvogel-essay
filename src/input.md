@@ -1,22 +1,3 @@
----
-title: "Vinaque sanguine metuenti cuiquam Alcyone fixus"
-author: [Philipp Kohn]
-date: \today
-subject: "Markdown"
-keywords: [Markdown, Example]
-subtitle: "Aesculeae domus vincemur et Veneris adsuetus lapsum"
-lang: "en"
-toc: true
-toc-own-page: true
-titlepage: true
-titlepage-text-color: "000000"
-titlepage-rule-color: "000000"
-titlepage-rule-height: 2
-titlepage-logo: "src/assets/logo.png"
-logo-width: 60mm
-bibliography: src/assets/bibtex.bib
-csl: 
----
 
 Frau Heidrun Kopp
 

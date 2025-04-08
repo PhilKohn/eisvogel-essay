@@ -12,10 +12,13 @@ jobs:
       # checkout repo contents
       - uses: actions/checkout@v4
 
-      # run pandoc to generate pdf from markdown
+      # Make script executable
+      - name: Make script executable
+        run: chmod +x ./pandoc-commands.sh
+
+      # run pandoc using external script
       - name: run pandoc
-        run: |
-          pandoc --verbose "./src/input.md" -o "output.pdf" --template /.pandoc/templates/eisvogel.latex
+        run: ./pandoc-commands.sh
 
       # output generated file to build artifacts
       - uses: actions/upload-artifact@v3
