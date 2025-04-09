@@ -1,11 +1,34 @@
-# Lorem Ipsum
+# Initial Setup
+## Download Macro-File
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in placerat felis. Vivamus aliquam mattis est, in gravida neque feugiat a. In nec nibh gravida, sollicitudin libero quis, viverra nisi. Quisque aliquet porta pellentesque. Curabitur fermentum ullamcorper tortor, at tincidunt orci pretium in. Cras nulla nibh, consequat sed tellus ac, tempus finibus quam. Morbi venenatis maximus tellus, vitae pretium felis hendrerit nec.
+1. Go to [TrackingListUpdate](https://munichre.sharepoint.com/:f:/r/teams/race_e2e-TaskForcePMO/Shared%20Documents/Task%20Force%20PMO/weekly_contact_list/TrackingListUpdate?csf=1&web=1&e=oOC0y5) folder
+2. Save folder `TrackingListUpdate` to your local C Drive
 
-Vivamus in turpis facilisis, ullamcorper eros sit amet, volutpat libero. Nulla tristique ultrices libero eget bibendum. Nullam nibh lorem, tempus quis cursus ut, mattis eget nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam fermentum elit sit amet turpis placerat tristique. Integer molestie tellus ut libero finibus, vitae ultrices ex consectetur. Nunc bibendum dolor eget diam gravida sagittis. Mauris dapibus scelerisque metus id fringilla. Vestibulum sagittis suscipit urna eu interdum. Suspendisse ultrices pulvinar tellus non gravida. Aliquam malesuada lobortis magna vitae lacinia. Morbi auctor dui magna, in feugiat ipsum facilisis et. Vestibulum porta molestie lorem eget ultricies. Vivamus laoreet, sapien id tincidunt iaculis, arcu sem placerat purus, vitae suscipit enim urna in eros. Sed accumsan lacinia erat, at tincidunt quam mollis eget.
+# Daily Update
+## Collect Exports
 
-Nulla congue augue sed arcu molestie, a fermentum mi posuere. Nullam magna nibh, mattis sed dignissim eu, imperdiet vehicula lorem. Cras gravida massa sed lectus hendrerit, vel congue metus bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse purus risus, sagittis at justo sagittis, aliquam malesuada purus. Quisque vitae elit nunc. Praesent a consectetur orci, at hendrerit lorem.
+1. Archer Report 
+	1. Go to [01_PowerBI Data Preparation](https://munichre.sharepoint.com/:f:/r/teams/race_e2e-RACE20252/Shared%20Documents/RACE%20%202025/05_Reporting/01_PowerBI%20Data%20Preparation?csf=1&web=1&e=0yUlcq) folder
+	2. Open most recent week folder (ex. `CW15`)
+	3. Open most recent day folder (ex. `CW15c`)
+	4. Open File `YYYYMMDD_Automization PowerBI Preperation_v0-10.xlsx` 
+	5. `File>Create a Copy>Download a Copy` save to your local `TrackingListUpdate` folder as `ArcherReport.xlsx` (*you need to replace the existing file*)
+		1. If `Create a Copy` is greyed out, select a confidentiality lable (C2) first.
+2. Power BI
+	1. Go to [PowerBI](https://app.powerbi.com/Redirect?action=OpenReport&appId=adcdef53-b2c5-4b78-89fd-d04616a1482e&reportObjectId=bc8bda58-7008-459a-92c8-32d94b0f786f&ctid=582259a1-dcaa-4cca-b1cf-e60d3f045ecd&reportPage=ReportSection0c5d8b800054b0102245&pbi_source=appShareLink&portalSessionId=e9119722-07ad-4c08-bd5a-f11aff865546) report
+	2. Select Dashboard `Drilldown Race>Per Application`
+	3. Make sure that the last update was made today (Upper left corner "Datenaktualisierung")
+	4. Make sure all filters are removed
+	5. Select `Weitere Optionen` (three dots when hovering over right corner of blue bar above the table) select `Daten Exportieren` select `Daten mit aktuellem Layout` 
+	6. Press `Exportieren`
+	7. Save to your local `TrackingListUpdate` folder as `PowerBI.xlsx` (*you need to replace the existing file*)
 
-Curabitur vitae sapien eu odio aliquet cursus ut et elit. Aenean bibendum vestibulum maximus. Donec sollicitudin vehicula finibus. In elementum odio tincidunt ornare commodo. Mauris quis orci sit amet urna venenatis vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet vel ipsum vitae egestas. Donec accumsan pulvinar nulla, in feugiat velit vulputate non. Maecenas rutrum neque ipsum, a euismod nulla mollis vel.
+## Join both Exports
 
-Pellentesque facilisis arcu in dictum venenatis. In imperdiet orci non lectus pulvinar, eget viverra sem aliquam. Duis velit nisi, viverra vel tortor non, dignissim malesuada nisl. Nam sapien diam, pulvinar et tincidunt eu, ullamcorper nec lectus. Suspendisse potenti. Fusce dictum neque in ullamcorper tempus. Curabitur justo turpis, finibus vitae massa non, sodales consectetur ligula.
+1. Open `JOIN.xlsm` in your local `TrackingListUpdate` folder
+2. Follow steps 1-7 in sheet `Make`
+
+# Weekly Update
+## Update App IDs in Sheet `Tracking_Overview`
+
+1. After completing the daily update, follow steps 8-10 in sheet `Make`

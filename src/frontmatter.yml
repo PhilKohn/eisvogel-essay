@@ -1,13 +1,13 @@
-title: "Vinaque sanguine metuenti cuiquam Alcyone fixus"
+title: "How to Trackinglist Update"
 author: [Philipp Kohn]
 date: \today
 subject: "Markdown"
 keywords: [Markdown, Example]
-subtitle: "Aesculeae domus vincemur et Veneris adsuetus lapsum"
+#subtitle: "Aesculeae domus vincemur et Veneris adsuetus lapsum"
 lang: "en"
-toc: true
-toc-own-page: true
-titlepage: true
+toc: false
+toc-own-page: false
+titlepage: false
 titlepage-text-color: "000000"
 titlepage-rule-color: "000000"
 titlepage-rule-height: 2
