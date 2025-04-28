@@ -39,7 +39,19 @@ This repository provides a template for writing documents using Pandoc and the E
 
 - **YAML Front Matter**: Define metadata in `src/frontmatter.yml` (see: https://github.com/Wandmalfarbe/pandoc-latex-template)
 - **Sections and Headings**: Use `#` for sections, `##` for subsections, and so forth.
-- **References**: Add references to the `src/assets/bibtex.bib` file if needed.
+- **References**: Add references to the `src/assets/bibtex.bib` file if needed, give the path to the `*.cls` and `*.bib` files inside the `frontmatter.yml`. Don't forget to add the `--citeproc`filter in the pandoc command.
+   - Citing a collection of articles :[@SEABORN201514;@gamification-leaderboard-benefits].
+   - Blah blah [see @doe99, pp. 33-35; also @smith04, chap. 1].
+   - Blah blah [@doe99, pp. 33-35, 38-39 and *passim*].
+   - Blah blah [@smith04; @doe99] `pandoc` detects locator terms in the [CSL locale files][https://github.com/citation-style-language/locales]. 
+   - `pandoc` will use heuristics to distinguish the locator from the suffix. In complex cases, the locator can be enclosed in curly braces:
+   - [@smith{ii, A, D-Z}, with a suffix]
+   - [@smith, {pp. iv, vi-xi, [xv]-[xvii]} with suffix here]
+   - A minus sign [`-`] before the `@` will suppress mention of the author in the citation. This can be useful when the author is already mentioned in the text:
+   - Smith says blah [-@smith04].
+   - You can also write an in-text citation, as follows:
+   - @smith04 says blah.
+   - @smith04 [p. 33] says blah. 
 
 ## Requirements
 

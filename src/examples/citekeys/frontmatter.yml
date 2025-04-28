@@ -7,7 +7,6 @@ subtitle: "The 2023 Ransom Attack on Südwestfalen IT"
 lang: "en"
 toc: true
 toc-own-page: true
-number-sections: true
 titlepage: true
 titlepage-text-color: "000000"
 titlepage-rule-color: "000000"
@@ -16,4 +15,3 @@ titlepage-logo: "src/assets/logo.png"
 logo-width: 60mm
 bibliography: "src/assets/assignment1.bib"
 csl: "src/assets/apa.csl"
-link-citations: true
