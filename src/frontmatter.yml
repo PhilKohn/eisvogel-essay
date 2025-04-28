@@ -1,17 +1,17 @@
-title: "How to Trackinglist Update"
+title: "SECGOV Assignment 1"
 author: [Philipp Kohn]
 date: \today
 subject: "Markdown"
-keywords: [Markdown, Example]
-#subtitle: "Aesculeae domus vincemur et Veneris adsuetus lapsum"
+keywords: [SECGOV, Open E-Governemt, 2023 SIT Ransom Attack, Cybersecurity, Akira]
+subtitle: "The 2023 Ransom Attack on Südwestfalen IT"
 lang: "en"
-toc: false
-toc-own-page: false
-titlepage: false
+toc: true
+toc-own-page: true
+titlepage: true
 titlepage-text-color: "000000"
 titlepage-rule-color: "000000"
 titlepage-rule-height: 2
 titlepage-logo: "src/assets/logo.png"
 logo-width: 60mm
-bibliography: src/assets/bibtex.bib
+bibliography: "src/assets/assignment1.bib"
 csl: 

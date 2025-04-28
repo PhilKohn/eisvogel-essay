@@ -1,23 +1,3 @@
----
-title: "SECGOV Assignment 1"
-author: [Philipp Kohn]
-date: \today
-subject: "Markdown"
-keywords: [SECGOV, Open E-Governemt, 2023 SIT Ransom Attack, Cybersecurity, Akira]
-subtitle: "The 2023 Ransom Attack on Südwestfalen IT"
-lang: "en"
-toc: true
-toc-own-page: true
-titlepage: true
-titlepage-text-color: "000000"
-titlepage-rule-color: "000000"
-titlepage-rule-height: 2
-titlepage-logo: "src/assets/logo.png"
-logo-width: 60mm
-bibliography: "src/assets/assignment1.bib"
-csl: 
----
-
 # Introduction
 
 Government entities face increasingly sophisticated cyber threats that can compromise critical infrastructure and sensitive data [@bornransomwarebeikommunal2024]. The October 2023 ransomware attack on Südwestfalen-IT (SIT) exemplifies this challenge, representing one of Germany's most severe public sector security incidents [@legaldatacyberattackhitslocal2023]. Perpetrated by the Akira group, this attack paralyzed over 70 municipalities, affected approximately 1.6 million citizens, and compromised 1,463 servers [@bornransomwarebeikommunal2024]. It demonstrates how cyberattacks exploit e-government vulnerabilities, highlighting the need for robust security frameworks [@daturexsuedwestfalenitplantreformen2024]. This report examines the SIT case to identify key vulnerabilities and provide actionable recommendations for strengthening government cybersecurity.
