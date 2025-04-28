@@ -14,4 +14,4 @@ titlepage-rule-height: 2
 titlepage-logo: "src/assets/logo.png"
 logo-width: 60mm
 bibliography: "src/assets/assignment1.bib"
-csl: 
+csl: "src/assets/apa.csl"
