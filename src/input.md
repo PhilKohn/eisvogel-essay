@@ -80,6 +80,10 @@ These concepts form a framework addressing the vulnerabilities exploited in this
 
 The Südwestfalen-IT incident exemplifies how cascading security failures can paralyze essential government services. Analysis reveals that fundamental controls—properly configured VPNs, multi-factor authentication, network segmentation, and rigorous patch management—would have prevented or significantly contained this attack. This breach underscores that security requires a comprehensive approach integrating people, processes, and technologies. Government entities must prioritize security policies, practices, and procedures while implementing robust technological safeguards [@srinivasgovernmentregulationscyber2019]. The C.I.A. triangle (confidentiality, integrity, availability) [see @whatciatriad] remains the cornerstone of governmental security architecture. As e-government services expand, this incident serves as a critical reminder that absent proper security frameworks, even sophisticated municipal infrastructures remain vulnerable to relatively straightforward attack vectors .
 
+# Code of Honor
+
+I hereby declare to have followed DSV's code of honor and AI policy.
+
 # References
  
 <div id="refs"></div>
