@@ -14,7 +14,7 @@ titlepage-rule-color: "000000"
 titlepage-rule-height: 2
 titlepage-logo: "src/assets/logo.png"
 logo-width: 60mm
-bibliography: src/assets/assignment1.bib
+bibliography: "src/assets/assignment1.bib"
 csl: 
 ---
 
