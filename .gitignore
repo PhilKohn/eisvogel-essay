@@ -22,7 +22,8 @@
 # *.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
-.pdf
+*.zip
+*.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -240,3 +241,4 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+

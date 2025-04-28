@@ -4,7 +4,7 @@ on: push
 
 jobs:
   convert_via_pandoc:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     container: 
       image: pandoc/extra
 
@@ -12,13 +12,16 @@ jobs:
       # checkout repo contents
       - uses: actions/checkout@v4
 
-      # run pandoc to generate pdf from markdown
+      # Make script executable
+      - name: Make script executable
+        run: chmod +x ./pandoc-commands.sh
+
+      # Run pandoc using sh
       - name: run pandoc
-        run: |
-          pandoc --verbose "./src/input.md" -o "output.pdf" --template /.pandoc/templates/eisvogel.latex
+        run: sh ./pandoc-commands.sh
 
       # output generated file to build artifacts
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: output
-          path: "output.pdf"
+          path: "output.*"

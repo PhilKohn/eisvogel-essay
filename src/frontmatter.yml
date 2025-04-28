@@ -1,0 +1,17 @@
+title: "How to Trackinglist Update"
+author: [Philipp Kohn]
+date: \today
+subject: "Markdown"
+keywords: [Markdown, Example]
+#subtitle: "Aesculeae domus vincemur et Veneris adsuetus lapsum"
+lang: "en"
+toc: false
+toc-own-page: false
+titlepage: false
+titlepage-text-color: "000000"
+titlepage-rule-color: "000000"
+titlepage-rule-height: 2
+titlepage-logo: "src/assets/logo.png"
+logo-width: 60mm
+bibliography: src/assets/bibtex.bib
+csl: 
