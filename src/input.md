@@ -82,7 +82,7 @@ The Südwestfalen-IT incident exemplifies how cascading security failures can pa
 
 # Code of Honor
 
-I hereby declare to have followed DSV's code of honor and AI policy.
+I hereby declare that I have followed DSV’s Code of Honor and AI Policy.
 
 # References
  
